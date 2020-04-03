@@ -1,0 +1,58 @@
+<form #filtersForm="ngForm" class="filters">
+    <div class="slider-wrapper">
+      <label for="minSlider">
+        {{ minValue }}% Min ABV
+      </label>
+      <mat-slider
+        name="minSlider"
+        [min]="min"
+        [max]="maxValue - 1"
+        [step]="step"
+        [ngModel]="minValue"
+        (ngModelChange)="modelChange(filtersForm.value)"
+        (input)="updateMinValue($event.value)">
+      </mat-slider>
+    </div>
+
+    <div class="slider-wrapper">
+      <label for="maxSlider">
+       {{ maxValue }}% Max ABV
+      </label>
+      <mat-slider 
+        name="maxSlider"
+        [min]="minValue + 1"
+        [max]="max"
+        [step]="step"
+        [ngModel]="maxValue"
+        (ngModelChange)="modelChange(filtersForm.value)"
+        (input)="updateMaxValue($event.value)">
+      </mat-slider>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Style</mat-label>
+      <mat-select
+        name="styleSearch"
+        ngModel
+        (ngModelChange)="modelChange(filtersForm.value)">
+        <mat-option>Any</mat-option>
+        <mat-option
+          *ngFor="let style of styles"
+          [value]="style">
+          {{ style }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Food pairing</mat-label>
+      <input
+        matInput
+        name="foodSearch"
+        type="text"
+        placeholder="eg. chips"
+        ngModel
+        (ngModelChange)="modelChange(filtersForm.value)"
+        autocomplete="off">
+    </mat-form-field>
+  </form>
