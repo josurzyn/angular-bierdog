@@ -45,9 +45,9 @@ export class FiltersComponent implements OnInit {
 
   modelChange(value) {
     // Edit min and max to account for less than / greater than
-    value.maxSlider += 0.5;
+    value.maxSlider += 0.1;
     if (value.minSlider > 0 ){
-      value.minSlider -= 0.5;
+      value.minSlider -= 0.1;
     }
     // construct parameters
     this.params = `abv_lt=${value.maxSlider}&abv_gt=${value.minSlider}`;
