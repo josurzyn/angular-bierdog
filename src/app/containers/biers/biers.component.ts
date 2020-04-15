@@ -64,7 +64,7 @@ export class BiersComponent implements OnInit, OnDestroy {
       }
       this.randomSub = this.biersService
         .getRandomBier()
-        .subscribe((data: Bier) => {
+        .subscribe((data: Bier[]) => {
           this.randomBier = data[0];
           this.isGettingBiers = false;
         });

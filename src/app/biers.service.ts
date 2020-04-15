@@ -1,14 +1,13 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class BiersService {
+  constructor(private http: HttpClient) {}
 
-  constructor( private http: HttpClient ) { }
-
-  baseUrl: string = 'https://api.punkapi.com/v2/beers';
+  baseUrl: string = "https://api.punkapi.com/v2/beers";
 
   getBiers() {
     return this.http.get(`${this.baseUrl}?per_page=50`);
@@ -21,5 +20,4 @@ export class BiersService {
   getByFilters(params: string) {
     return this.http.get(`${this.baseUrl}?${params}`);
   }
-
 }
