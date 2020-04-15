@@ -1,9 +1,10 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
 
 import { Bier } from "../../../models/bier.interface";
 
 @Component({
   selector: "app-bier-detail",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./bier-detail.component.html",
   styleUrls: ["./bier-detail.component.scss"],
 })

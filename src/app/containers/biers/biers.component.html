@@ -1,37 +1,33 @@
 <div class="container">
+  <button mat-raised-button (click)="getRandom()">
+    Surprise Me
+  </button>
 
-    <button mat-raised-button (click)="handleRandom()">
-      Surprise Me
-    </button>
+  <button mat-raised-button (click)="handleBrowse()">
+    Browse the catalogue
+  </button>
 
-    <button mat-raised-button (click)="handleBrowse()">
-      Browse the catalogue
-    </button>
+  <app-filters (updateParams)="onUpdateParams($event)"> </app-filters>
 
-    <app-filters
-      (updateParams)="onUpdateParams($event)">
-    </app-filters>
-    
-    <div *ngIf="randomBier">
-      <h3>Why not try a...</h3>
-      <app-bier-detail
-        [detail]="randomBier"
-        class="random-bier">
-      </app-bier-detail>
-    </div>
-
-    <div *ngIf="!randomBier" class="bier-container">
-      <app-bier-detail
-        class="detail-single"
-        *ngFor="let bier of apiBiers"
-        [detail]="bier">
-      </app-bier-detail>
-    </div>
-
-    <div *ngIf="apiBiers.length === 0 && !randomBier && !isGettingBiers">
-      Oops, we can't find any matching beers. Try adjusting the filters to find your perfect brew.
-    </div>
-
-    <mat-spinner *ngIf="isGettingBiers"></mat-spinner>
-    
+  <div *ngIf="randomBier">
+    <h3>Why not try a...</h3>
+    <app-bier-detail [detail]="randomBier" class="random-bier">
+    </app-bier-detail>
   </div>
+
+  <div *ngIf="!randomBier" class="bier-container">
+    <app-bier-detail
+      class="detail-single"
+      *ngFor="let bier of apiBiers"
+      [detail]="bier"
+    >
+    </app-bier-detail>
+  </div>
+
+  <div *ngIf="noBiersFound">
+    Oops, we can't find any matching beers. Try adjusting the filters to find
+    your perfect brew.
+  </div>
+
+  <mat-spinner *ngIf="isGettingBiers"></mat-spinner>
+</div>
