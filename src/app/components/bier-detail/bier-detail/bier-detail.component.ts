@@ -1,19 +1,25 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
-import { Bier } from '../../../models/bier.interface';
+import { Bier } from "../../../models/bier.interface";
 
 @Component({
-  selector: 'app-bier-detail',
-  templateUrl: './bier-detail.component.html',
-  styleUrls: ['./bier-detail.component.scss'],
+  selector: "app-bier-detail",
+  templateUrl: "./bier-detail.component.html",
+  styleUrls: ["./bier-detail.component.scss"],
 })
 export class BierDetailComponent {
-
   @Input()
-  detail: Bier; 
+  detail: Bier;
 
   placeholder: string = "../assets/img/bier-dog-bottle.png";
 
-  constructor() { }
+  constructor() {}
 
+  get image(): string {
+    if (this.detail.image_url) {
+      return this.detail.image_url;
+    } else {
+      return this.placeholder;
+    }
+  }
 }

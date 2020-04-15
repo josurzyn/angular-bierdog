@@ -1,11 +1,11 @@
 <mat-card class="single-bier column-margin">
-    <h3>{{ detail.name }}</h3>
-    <p>{{ detail.abv }}% ABV</p>
-    <p>{{ detail?.tagline }}</p>
-    <img [src]="(detail?.image_url ? detail.image_url : placeholder)" alt="bier illustration" class="bier-pic">
-    <p>{{ detail?.description }}</p>
-    <h3>Goes with:</h3>
-    <ul>
-      <li *ngFor="let food of detail.food_pairing">{{ food }}</li>
-    </ul>
-  </mat-card>
+  <h3>{{ detail.name }}</h3>
+  <p>{{ detail.abv }}% ABV</p>
+  <p *ngIf="detail.tagline">{{ detail.tagline }}</p>
+  <img [src]="image" alt="bier illustration" class="bier-pic" />
+  <p>{{ detail?.description }}</p>
+  <h3>Goes with:</h3>
+  <ul>
+    <li *ngFor="let food of detail.food_pairing">{{ food }}</li>
+  </ul>
+</mat-card>
