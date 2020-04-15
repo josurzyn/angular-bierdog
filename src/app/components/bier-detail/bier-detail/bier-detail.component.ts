@@ -12,7 +12,7 @@ export class BierDetailComponent {
   @Input()
   detail: Bier;
 
-  placeholder: string = "../assets/img/bier-dog-bottle.png";
+  placeholder = "../assets/img/bier-dog-bottle.png";
 
   constructor() {}
 

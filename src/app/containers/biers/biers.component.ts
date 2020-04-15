@@ -13,8 +13,8 @@ import { Subscription } from "rxjs";
 })
 export class BiersComponent implements OnInit, OnDestroy {
   apiBiers: Bier[] = [];
-  randomBier: Bier;
-  isGettingBiers: boolean = false;
+  randomBier: Bier | null = null;
+  isGettingBiers = false;
   randomSub: Subscription;
   browseSub: Subscription;
   filterSub: Subscription;
