@@ -10,17 +10,20 @@ import { Bier } from "../../../models/bier.interface";
 })
 export class BierDetailComponent {
   @Input()
-  detail: Bier;
+  detail: Bier | undefined;
 
   placeholder = "../assets/img/bier-dog-bottle.png";
 
   constructor() {}
 
   get image(): string {
-    if (this.detail.image_url) {
-      return this.detail.image_url;
-    } else {
-      return this.placeholder;
+    if (this.detail) {
+      if (this.detail.image_url) {
+        return this.detail.image_url;
+      } else {
+        return this.placeholder;
+      }
     }
+    return "";
   }
 }

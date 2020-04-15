@@ -15,9 +15,9 @@ export class BiersComponent implements OnInit, OnDestroy {
   apiBiers: Bier[] = [];
   randomBier: Bier | null = null;
   isGettingBiers = false;
-  randomSub: Subscription;
-  browseSub: Subscription;
-  filterSub: Subscription;
+  randomSub: Subscription = Subscription.EMPTY;
+  browseSub: Subscription = Subscription.EMPTY;
+  filterSub: Subscription = Subscription.EMPTY;
 
   constructor(private biersService: BiersService) {}
 

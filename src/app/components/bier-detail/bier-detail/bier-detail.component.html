@@ -1,4 +1,4 @@
-<mat-card class="single-bier column-margin">
+<mat-card class="single-bier column-margin" *ngIf="detail">
   <h3>{{ detail.name }}</h3>
   <p>{{ detail.abv }}% ABV</p>
   <p *ngIf="detail.tagline">{{ detail.tagline }}</p>
