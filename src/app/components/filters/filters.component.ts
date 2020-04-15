@@ -1,11 +1,11 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'app-filters',
-  templateUrl: 'filters.component.html',
-  styleUrls: ['./filters.component.scss']
+  selector: "app-filters",
+  templateUrl: "filters.component.html",
+  styleUrls: ["./filters.component.scss"],
 })
-export class FiltersComponent implements OnInit {
+export class FiltersComponent {
   // Slider values
   min: number = 0;
   max: number = 55;
@@ -13,27 +13,22 @@ export class FiltersComponent implements OnInit {
   // Default Max and Min ABV Values
   minValue: number = this.min;
   maxValue: number = this.max;
-  
+
   // Style Selector
   styles: string[] = [
-    'IPA',
-    'Lager',
-    'Pilsner',
-    'Weizen',
-    'Wheat',
-    'Stout',
-    'Porter'
-  ]
-
-  params: string;
+    "IPA",
+    "Lager",
+    "Pilsner",
+    "Weizen",
+    "Wheat",
+    "Stout",
+    "Porter",
+  ];
 
   @Output()
   updateParams: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  constructor() {}
 
   updateMaxValue(value: number) {
     this.maxValue = value;
@@ -43,20 +38,21 @@ export class FiltersComponent implements OnInit {
     this.minValue = value;
   }
 
-  modelChange(value) {
+  updateFilters(value) {
+    let params: string;
     // Edit min and max to account for less than / greater than
     value.maxSlider += 0.1;
-    if (value.minSlider > 0 ){
+    if (value.minSlider > 0) {
       value.minSlider -= 0.1;
     }
     // construct parameters
-    this.params = `abv_lt=${value.maxSlider}&abv_gt=${value.minSlider}`;
+    params = `abv_lt=${value.maxSlider}&abv_gt=${value.minSlider}`;
     if (value.foodSearch) {
-      this.params += `&food=${value.foodSearch.replace(/ /g, "_")}`;
+      params += `&food=${value.foodSearch.replace(/ /g, "_")}`;
     }
     if (value.styleSearch) {
-      this.params += `&beer_name=${value.styleSearch}`;
+      params += `&beer_name=${value.styleSearch}`;
     }
-    this.updateParams.emit(this.params);
+    this.updateParams.emit(params);
   }
 }
