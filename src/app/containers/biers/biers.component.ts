@@ -1,53 +1,51 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from "@angular/core";
 
-import { Bier } from '../../models/bier.interface';
+import { Bier } from "../../models/bier.interface";
 
-import { BiersService } from '../../biers.service';
+import { BiersService } from "../../biers.service";
 
-import { Subscription } from 'rxjs';
+import { Subscription } from "rxjs";
 
 @Component({
-  selector: 'app-biers',
-  templateUrl: './biers.component.html',
-  styleUrls: ['./biers.component.scss']
+  selector: "app-biers",
+  templateUrl: "./biers.component.html",
+  styleUrls: ["./biers.component.scss"],
 })
 export class BiersComponent implements OnInit, OnDestroy {
-
   apiBiers: Bier[] = [];
-  randomBier: Bier;
-  isGettingBiers: boolean = false;
-  randomSub: Subscription;
-  browseSub: Subscription;
-  filterSub: Subscription;
+  randomBier: Bier | null = null;
+  isGettingBiers = false;
+  randomSub: Subscription = Subscription.EMPTY;
+  browseSub: Subscription = Subscription.EMPTY;
+  filterSub: Subscription = Subscription.EMPTY;
 
-  constructor( private biersService: BiersService ) { }
+  constructor(private biersService: BiersService) {}
 
   ngOnInit() {
-    if (!this.isGettingBiers) {
-      this.isGettingBiers = true;
-      this.randomSub = this.biersService
-      .getRandomBier()
-      .subscribe((data: Bier) => {
-        this.randomBier = data[0];
-        this.isGettingBiers = false;
-      });
-    }
+    this.getRandom();
   }
 
   ngOnDestroy() {
-    this.randomSub.unsubscribe;
-    if(this.browseSub) {
-      this.browseSub.unsubscribe;
+    this.randomSub.unsubscribe();
+    if (this.browseSub) {
+      this.browseSub.unsubscribe();
     }
     if (this.filterSub) {
-      this.filterSub.unsubscribe;
+      this.filterSub.unsubscribe();
     }
   }
 
   // Get 50 beers on browse button click
   handleBrowse() {
+    // Remove random bier from view
+    if (this.randomBier) {
+      this.randomBier = null;
+    }
     if (!this.isGettingBiers) {
       this.isGettingBiers = true;
+      if (this.browseSub) {
+        this.browseSub.unsubscribe();
+      }
       this.browseSub = this.biersService
         .getBiers()
         .subscribe((data: Bier[]) => {
@@ -55,24 +53,22 @@ export class BiersComponent implements OnInit, OnDestroy {
           this.isGettingBiers = false;
         });
     }
-    // Remove random bier from view
-    if (this.randomBier) {
-      this.randomBier = null;
-    }
   }
 
   // Get random bier on Surpise me click
-  handleRandom() {
+  getRandom() {
     if (!this.isGettingBiers) {
       this.isGettingBiers = true;
+      if (this.randomSub) {
+        this.randomSub.unsubscribe();
+      }
       this.randomSub = this.biersService
         .getRandomBier()
-        .subscribe((data: Bier) => {
-        this.randomBier = data[0];
-        this.isGettingBiers = false;
-      });
+        .subscribe((data: Bier[]) => {
+          this.randomBier = data[0];
+          this.isGettingBiers = false;
+        });
     }
-
   }
 
   // Get biers by filters whenever filters are changed
@@ -83,6 +79,9 @@ export class BiersComponent implements OnInit, OnDestroy {
     }
     if (!this.isGettingBiers) {
       this.isGettingBiers = true;
+      if (this.filterSub) {
+        this.filterSub.unsubscribe();
+      }
       this.filterSub = this.biersService
         .getByFilters(params)
         .subscribe((data: Bier[]) => {
@@ -90,7 +89,17 @@ export class BiersComponent implements OnInit, OnDestroy {
           this.isGettingBiers = false;
         });
     }
-
   }
 
+  get noBiersFound() {
+    if (
+      this.apiBiers.length === 0 &&
+      !this.randomBier &&
+      !this.isGettingBiers
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

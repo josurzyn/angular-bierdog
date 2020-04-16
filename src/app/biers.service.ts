@@ -1,25 +1,24 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Bier } from "./models/bier.interface";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class BiersService {
+  constructor(private http: HttpClient) {}
 
-  constructor( private http: HttpClient ) { }
-
-  baseUrl: string = 'https://api.punkapi.com/v2/beers';
+  baseUrl: string = "https://api.punkapi.com/v2/beers";
 
   getBiers() {
-    return this.http.get(`${this.baseUrl}?per_page=50`);
+    return this.http.get<Bier[]>(`${this.baseUrl}?per_page=50`);
   }
 
   getRandomBier() {
-    return this.http.get(`${this.baseUrl}/random`);
+    return this.http.get<Bier[]>(`${this.baseUrl}/random`);
   }
 
   getByFilters(params: string) {
-    return this.http.get(`${this.baseUrl}?${params}`);
+    return this.http.get<Bier[]>(`${this.baseUrl}?${params}`);
   }
-
 }

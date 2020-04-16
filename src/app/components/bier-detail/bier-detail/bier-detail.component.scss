@@ -1,25 +1,25 @@
 .single-bier {
-    break-inside: avoid;
-    display: flex;
-    flex-direction: column;
-    max-width: 250px;
-    margin: 40px 10px;
-    h3 {
-        margin: 8px 0 4px;
-    }
-    p {
-        font-size: 0.9em;
-        margin: 0;
-        text-align: justify;
-    }
-    .bier-pic {
-        margin: 20px;
-        max-height: 200px;
-        max-width: 100px;
-        align-self: center;
-    }
-    ul {
-        margin: 0;
-        padding: 0 0 0 20px;
-    }
+  break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  margin: 40px 10px;
+  h3 {
+    margin: 8px 0 4px;
+  }
+  p {
+    font-size: 0.9em;
+    margin: 0;
+    text-align: justify;
+  }
+  .bier-pic {
+    margin: 20px;
+    max-height: 200px;
+    max-width: 100px;
+    align-self: center;
+  }
+  ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+  }
 }

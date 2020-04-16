@@ -1,29 +1,29 @@
-import { Component, Output, EventEmitter } from "@angular/core";
+import {
+  Component,
+  Output,
+  EventEmitter,
+  ChangeDetectionStrategy,
+} from "@angular/core";
+
+import { Search } from "../../models/search.interface";
 
 @Component({
   selector: "app-filters",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "filters.component.html",
   styleUrls: ["./filters.component.scss"],
 })
 export class FiltersComponent {
   // Slider values
-  min: number = 0;
-  max: number = 55;
-  step: number = 0.5;
+  min = 0;
+  max = 55;
+  step = 0.5;
   // Default Max and Min ABV Values
-  minValue: number = this.min;
-  maxValue: number = this.max;
+  minValue = this.min;
+  maxValue = this.max;
 
   // Style Selector
-  styles: string[] = [
-    "IPA",
-    "Lager",
-    "Pilsner",
-    "Weizen",
-    "Wheat",
-    "Stout",
-    "Porter",
-  ];
+  styles = ["IPA", "Lager", "Pilsner", "Weizen", "Wheat", "Stout", "Porter"];
 
   @Output()
   updateParams: EventEmitter<string> = new EventEmitter<string>();
@@ -38,7 +38,7 @@ export class FiltersComponent {
     this.minValue = value;
   }
 
-  updateFilters(value) {
+  updateFilters(value: Search) {
     let params: string;
     // Edit min and max to account for less than / greater than
     value.maxSlider += 0.1;
