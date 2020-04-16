@@ -19,7 +19,6 @@ import { BiersComponent } from './containers/biers/biers.component';
 import { AboutComponent } from './components/about/about.component';
 import { BierDetailComponent } from './components/bier-detail/bier-detail/bier-detail.component';
 import { FiltersComponent } from './components/filters/filters.component';
-import { RemoveSpacePipe } from './pipes/remove-space.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { RemoveSpacePipe } from './pipes/remove-space.pipe';
     AboutComponent,
     BierDetailComponent,
     FiltersComponent,
-    RemoveSpacePipe,
   ],
   imports: [
     BrowserModule,
