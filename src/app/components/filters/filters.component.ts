@@ -1,11 +1,18 @@
 import {
   Component,
   Output,
+  ViewChild,
   EventEmitter,
   ChangeDetectionStrategy,
+  AfterViewInit,
+  OnDestroy,
 } from '@angular/core';
 
+import { NgForm } from '@angular/forms';
+
 import { Search } from './search.interface';
+
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-filters',
@@ -13,7 +20,7 @@ import { Search } from './search.interface';
   templateUrl: 'filters.component.html',
   styleUrls: ['./filters.component.scss'],
 })
-export class FiltersComponent {
+export class FiltersComponent implements AfterViewInit, OnDestroy {
   // Slider values
   min = 0;
   max = 55;
@@ -25,10 +32,28 @@ export class FiltersComponent {
   // Style Selector
   styles = ['IPA', 'Lager', 'Pilsner', 'Weizen', 'Wheat', 'Stout', 'Porter'];
 
+  // Form subscription
+  formSub: Subscription = Subscription.EMPTY;
+
+  @ViewChild('filtersForm') filtersForm: NgForm | undefined;
+
   @Output()
   updateParams: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {}
+
+  ngAfterViewInit() {
+    // adsföjasödjklf
+    if (this.filtersForm && this.filtersForm.valueChanges) {
+      this.formSub = this.filtersForm.valueChanges.subscribe((form: Search) => {
+        this.updateFilters(form);
+      });
+    }
+  }
+
+  ngOnDestroy() {
+    this.formSub.unsubscribe();
+  }
 
   updateMaxValue(value: number) {
     this.maxValue = value;
