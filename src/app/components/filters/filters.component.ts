@@ -3,15 +3,15 @@ import {
   Output,
   EventEmitter,
   ChangeDetectionStrategy,
-} from "@angular/core";
+} from '@angular/core';
 
-import { Search } from "../../models/search.interface";
+import { Search } from '../../models/search.interface';
 
 @Component({
-  selector: "app-filters",
+  selector: 'app-filters',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "filters.component.html",
-  styleUrls: ["./filters.component.scss"],
+  templateUrl: 'filters.component.html',
+  styleUrls: ['./filters.component.scss'],
 })
 export class FiltersComponent {
   // Slider values
@@ -23,7 +23,7 @@ export class FiltersComponent {
   maxValue = this.max;
 
   // Style Selector
-  styles = ["IPA", "Lager", "Pilsner", "Weizen", "Wheat", "Stout", "Porter"];
+  styles = ['IPA', 'Lager', 'Pilsner', 'Weizen', 'Wheat', 'Stout', 'Porter'];
 
   @Output()
   updateParams: EventEmitter<string> = new EventEmitter<string>();
@@ -48,7 +48,7 @@ export class FiltersComponent {
     // construct parameters
     params = `abv_lt=${value.maxSlider}&abv_gt=${value.minSlider}`;
     if (value.foodSearch) {
-      params += `&food=${value.foodSearch.replace(/ /g, "_")}`;
+      params += `&food=${value.foodSearch.replace(/ /g, '_')}`;
     }
     if (value.styleSearch) {
       params += `&beer_name=${value.styleSearch}`;

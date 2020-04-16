@@ -1,15 +1,15 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { Bier } from "../../models/bier.interface";
+import { Bier } from '../../models/bier.interface';
 
-import { BiersService } from "../../biers.service";
+import { BiersService } from '../../biers.service';
 
-import { Subscription } from "rxjs";
+import { Subscription } from 'rxjs';
 
 @Component({
-  selector: "app-biers",
-  templateUrl: "./biers.component.html",
-  styleUrls: ["./biers.component.scss"],
+  selector: 'app-biers',
+  templateUrl: './biers.component.html',
+  styleUrls: ['./biers.component.scss'],
 })
 export class BiersComponent implements OnInit, OnDestroy {
   apiBiers: Bier[] = [];
