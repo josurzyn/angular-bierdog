@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { Bier } from '../../models/bier.interface';
+import { Bier } from '../../bier.interface';
 
 import { BiersService } from '../../biers.service';
 

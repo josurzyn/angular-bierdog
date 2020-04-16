@@ -5,7 +5,7 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 
-import { Search } from '../../models/search.interface';
+import { Search } from './search.interface';
 
 @Component({
   selector: 'app-filters',

@@ -1,6 +1,6 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
-import { Bier } from '../../../models/bier.interface';
+import { Bier } from '../../../bier.interface';
 
 @Component({
   selector: 'app-bier-detail',
