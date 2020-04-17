@@ -43,7 +43,6 @@ export class FiltersComponent implements AfterViewInit, OnDestroy {
   constructor() {}
 
   ngAfterViewInit() {
-    // adsföjasödjklf
     if (this.filtersForm && this.filtersForm.valueChanges) {
       this.formSub = this.filtersForm.valueChanges.subscribe((form: Search) => {
         this.updateFilters(form);

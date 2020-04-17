@@ -1,5 +1,7 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
+import { FavouritesService } from '../../../favourites.service';
+
 import { Bier } from '../../../bier.interface';
 
 @Component({
@@ -10,13 +12,16 @@ import { Bier } from '../../../bier.interface';
 })
 export class BierDetailComponent {
   @Input()
-  detail: Bier | undefined;
+  // tslint: override non-null assertion
+  detail!: Bier;
 
   placeholder = '../assets/img/bier-dog-bottle.png';
 
   btnText = 'favourite';
 
-  constructor() {}
+  favourites: Bier[] = [];
+
+  constructor(private favouritesService: FavouritesService) {}
 
   get image(): string {
     if (this.detail) {
@@ -32,8 +37,10 @@ export class BierDetailComponent {
   favourite() {
     if (this.btnText === 'favourite') {
       this.btnText = 'unfavourite';
+      this.favouritesService.addBierToFavourites(this.detail);
     } else {
       this.btnText = 'favourite';
+      this.favouritesService.removeBierFromFavourites(this.detail);
     }
   }
 }

@@ -1,15 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
+import { FavouritesService } from '../../favourites.service';
+
+import { Bier } from '../../bier.interface';
+
+import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-favourites',
   templateUrl: './favourites.component.html',
-  styleUrls: ['./favourites.component.scss']
+  styleUrls: ['./favourites.component.scss'],
 })
 export class FavouritesComponent implements OnInit {
+  favourites: Bier[] = [];
 
-  constructor() { }
+  constructor(private favouritesService: FavouritesService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getFavourites();
   }
 
+  getFavourites() {
+    this.favourites = this.favouritesService.getFavouritesFromStorage();
+  }
 }
