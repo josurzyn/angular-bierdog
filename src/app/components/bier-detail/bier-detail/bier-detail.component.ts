@@ -14,6 +14,8 @@ export class BierDetailComponent {
 
   placeholder = '../assets/img/bier-dog-bottle.png';
 
+  btnText = 'favourite';
+
   constructor() {}
 
   get image(): string {
@@ -25,5 +27,13 @@ export class BierDetailComponent {
       }
     }
     return '';
+  }
+
+  favourite() {
+    if (this.btnText === 'favourite') {
+      this.btnText = 'unfavourite';
+    } else {
+      this.btnText = 'favourite';
+    }
   }
 }

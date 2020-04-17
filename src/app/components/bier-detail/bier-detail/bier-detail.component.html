@@ -1,6 +1,12 @@
 <mat-card class="single-bier column-margin" *ngIf="detail">
-  <h3>{{ detail.name }}</h3>
-  <p>{{ detail.abv }}% ABV</p>
+  <div class="wrapper">
+    <div class="bier-title">
+      <h3>{{ detail.name }}</h3>
+      <p>{{ detail.abv }}% ABV</p>
+    </div>
+    <button class="favourite" (click)="favourite()">{{ btnText }}</button>
+  </div>
+
   <p *ngIf="detail.tagline">{{ detail.tagline }}</p>
   <img [src]="image" alt="bier illustration" class="bier-pic" />
   <p>{{ detail?.description }}</p>
