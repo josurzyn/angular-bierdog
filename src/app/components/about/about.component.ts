@@ -1,10 +1,10 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: "app-about",
+  selector: 'app-about',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./about.component.html",
-  styleUrls: ["./about.component.scss"],
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent {
   constructor() {}

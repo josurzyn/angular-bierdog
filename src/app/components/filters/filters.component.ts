@@ -1,19 +1,26 @@
 import {
   Component,
   Output,
+  ViewChild,
   EventEmitter,
   ChangeDetectionStrategy,
-} from "@angular/core";
+  AfterViewInit,
+  OnDestroy,
+} from '@angular/core';
 
-import { Search } from "../../models/search.interface";
+import { NgForm } from '@angular/forms';
+
+import { Search } from './search.interface';
+
+import { Subscription } from 'rxjs';
 
 @Component({
-  selector: "app-filters",
+  selector: 'app-filters',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "filters.component.html",
-  styleUrls: ["./filters.component.scss"],
+  templateUrl: 'filters.component.html',
+  styleUrls: ['./filters.component.scss'],
 })
-export class FiltersComponent {
+export class FiltersComponent implements AfterViewInit, OnDestroy {
   // Slider values
   min = 0;
   max = 55;
@@ -23,12 +30,30 @@ export class FiltersComponent {
   maxValue = this.max;
 
   // Style Selector
-  styles = ["IPA", "Lager", "Pilsner", "Weizen", "Wheat", "Stout", "Porter"];
+  styles = ['IPA', 'Lager', 'Pilsner', 'Weizen', 'Wheat', 'Stout', 'Porter'];
+
+  // Form subscription
+  formSub: Subscription = Subscription.EMPTY;
+
+  @ViewChild('filtersForm') filtersForm: NgForm | undefined;
 
   @Output()
   updateParams: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {}
+
+  ngAfterViewInit() {
+    // adsföjasödjklf
+    if (this.filtersForm && this.filtersForm.valueChanges) {
+      this.formSub = this.filtersForm.valueChanges.subscribe((form: Search) => {
+        this.updateFilters(form);
+      });
+    }
+  }
+
+  ngOnDestroy() {
+    this.formSub.unsubscribe();
+  }
 
   updateMaxValue(value: number) {
     this.maxValue = value;
@@ -48,7 +73,7 @@ export class FiltersComponent {
     // construct parameters
     params = `abv_lt=${value.maxSlider}&abv_gt=${value.minSlider}`;
     if (value.foodSearch) {
-      params += `&food=${value.foodSearch.replace(/ /g, "_")}`;
+      params += `&food=${value.foodSearch.replace(/ /g, '_')}`;
     }
     if (value.styleSearch) {
       params += `&beer_name=${value.styleSearch}`;

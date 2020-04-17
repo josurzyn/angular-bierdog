@@ -1,18 +1,18 @@
-import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
-import { Bier } from "../../../models/bier.interface";
+import { Bier } from '../../../bier.interface';
 
 @Component({
-  selector: "app-bier-detail",
+  selector: 'app-bier-detail',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: "./bier-detail.component.html",
-  styleUrls: ["./bier-detail.component.scss"],
+  templateUrl: './bier-detail.component.html',
+  styleUrls: ['./bier-detail.component.scss'],
 })
 export class BierDetailComponent {
   @Input()
   detail: Bier | undefined;
 
-  placeholder = "../assets/img/bier-dog-bottle.png";
+  placeholder = '../assets/img/bier-dog-bottle.png';
 
   constructor() {}
 
@@ -24,6 +24,6 @@ export class BierDetailComponent {
         return this.placeholder;
       }
     }
-    return "";
+    return '';
   }
 }
