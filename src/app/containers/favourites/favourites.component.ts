@@ -18,9 +18,14 @@ export class FavouritesComponent implements OnInit {
 
   ngOnInit() {
     this.getFavourites();
+    console.log(this.favourites);
   }
 
   getFavourites() {
     this.favourites = this.favouritesService.getFavouritesFromStorage();
+  }
+
+  onUpdate() {
+    this.getFavourites();
   }
 }

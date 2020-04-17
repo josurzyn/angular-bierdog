@@ -1,4 +1,11 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  Input,
+  ChangeDetectionStrategy,
+  OnInit,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 
 import { FavouritesService } from '../../../favourites.service';
 
@@ -10,7 +17,7 @@ import { Bier } from '../../../bier.interface';
   templateUrl: './bier-detail.component.html',
   styleUrls: ['./bier-detail.component.scss'],
 })
-export class BierDetailComponent {
+export class BierDetailComponent implements OnInit {
   @Input()
   // tslint: override non-null assertion
   detail!: Bier;
@@ -21,7 +28,14 @@ export class BierDetailComponent {
 
   favourites: Bier[] = [];
 
+  @Output()
+  update: EventEmitter<any> = new EventEmitter<any>();
+
   constructor(private favouritesService: FavouritesService) {}
+
+  ngOnInit() {
+    this.setBtnText();
+  }
 
   get image(): string {
     if (this.detail) {
@@ -34,13 +48,32 @@ export class BierDetailComponent {
     return '';
   }
 
+  setBtnText() {
+    /* One way to check if bier already exists in favourites
+    const favourites = this.favouritesService.getFavouritesFromStorage();
+    favourites.forEach((bier: Bier) => {
+      if (this.detail.id === bier.id) {
+        this.detail.favourite = true;
+      }
+    });*/
+    if (this.detail.favourite) {
+      this.btnText = 'unfavourite';
+    } else {
+      this.btnText = 'favourite';
+    }
+  }
+
   favourite() {
-    if (this.btnText === 'favourite') {
+    // to favourite
+    if (!this.detail.favourite) {
+      this.detail.favourite = true;
       this.btnText = 'unfavourite';
       this.favouritesService.addBierToFavourites(this.detail);
     } else {
+      // to unfavourite
       this.btnText = 'favourite';
       this.favouritesService.removeBierFromFavourites(this.detail);
+      this.update.emit();
     }
   }
 }

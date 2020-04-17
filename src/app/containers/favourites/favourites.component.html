@@ -1,6 +1,8 @@
+<p *ngIf="favourites.length === 0">You don't have any favourites!</p>
 <app-bier-detail
   class="detail-single"
   *ngFor="let bier of favourites"
   [detail]="bier"
+  (update)="onUpdate()"
 >
 </app-bier-detail>
