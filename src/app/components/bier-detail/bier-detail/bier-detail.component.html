@@ -4,7 +4,13 @@
       <h3>{{ detail.name }}</h3>
       <p>{{ detail.abv }}% ABV</p>
     </div>
-    <button class="favourite" (click)="favourite()">{{ btnText }}</button>
+    <button class="favourite" (click)="favourite()">
+      <img
+        [src]="heart"
+        alt="full heart - you favourited this beer"
+        class="heart"
+      />
+    </button>
   </div>
 
   <p *ngIf="detail.tagline">{{ detail.tagline }}</p>

@@ -8,12 +8,13 @@
 
 <app-filters (updateParams)="onUpdateParams($event)"> </app-filters>
 
-<div *ngIf="randomBier">
+<!--<div *ngIf="randomBier">
   <h3>Why not try a...</h3>
   <app-bier-detail [detail]="randomBier" class="random-bier"> </app-bier-detail>
-</div>
+</div>-->
 
-<div *ngIf="!randomBier" class="bier-container">
+<div class="bier-container">
+  <h3 *ngIf="surprise">Why not try a...</h3>
   <app-bier-detail
     class="detail-single"
     *ngFor="let bier of apiBiers"

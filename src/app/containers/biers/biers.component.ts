@@ -14,7 +14,8 @@ import { Subscription } from 'rxjs';
 })
 export class BiersComponent implements OnInit, OnDestroy {
   apiBiers: Bier[] = [];
-  randomBier: Bier | null = null;
+  // randomBier: Bier | null = null;
+  surprise = false;
   isGettingBiers = false;
   randomSub: Subscription = Subscription.EMPTY;
   browseSub: Subscription = Subscription.EMPTY;
@@ -41,10 +42,13 @@ export class BiersComponent implements OnInit, OnDestroy {
 
   // Get 50 beers on browse button click
   handleBrowse() {
-    // Remove random bier from view
-    if (this.randomBier) {
-      this.randomBier = null;
+    if (this.surprise) {
+      this.surprise = false;
     }
+    // Remove random bier from view
+    /*if (this.randomBier) {
+      this.randomBier = null;
+    }*/
     if (!this.isGettingBiers) {
       this.isGettingBiers = true;
       if (this.browseSub) {
@@ -134,16 +138,21 @@ export class BiersComponent implements OnInit, OnDestroy {
           // this.randomBier = data[0];
           this.assignBiers(data);
           this.isGettingBiers = false;
+          this.surprise = true;
         });
     }
+    // console.log('random bier is', this.randomBier);
   }
 
   // Get biers by filters whenever filters are changed
   onUpdateParams(params: string) {
-    // Remove random bier from view
-    if (this.randomBier) {
-      this.randomBier = null;
+    if (this.surprise) {
+      this.surprise = false;
     }
+    // Remove random bier from view
+    /* if (this.randomBier) {
+      this.randomBier = null;
+    }*/
     if (!this.isGettingBiers) {
       this.isGettingBiers = true;
       if (this.filterSub) {
@@ -162,7 +171,7 @@ export class BiersComponent implements OnInit, OnDestroy {
   get noBiersFound() {
     if (
       this.apiBiers.length === 0 &&
-      !this.randomBier &&
+      // !this.randomBier &&
       !this.isGettingBiers
     ) {
       return true;
