@@ -1,19 +1,15 @@
 <mat-card class="single-bier" *ngIf="detail">
   <div class="wrapper">
     <div class="bier-title">
-      <h3>{{ detail.name }}</h3>
-      <p>{{ detail.abv }}% ABV</p>
+      <h3>{{ detail?.name }}</h3>
+      <p>{{ detail?.abv }}% ABV</p>
     </div>
     <button class="favourite" (click)="favourite()">
-      <img
-        [src]="heart"
-        alt="full heart - you favourited this beer"
-        class="heart"
-      />
+      <img [src]="heartImg" alt="heartAlt" class="heart" />
     </button>
   </div>
 
-  <p *ngIf="detail.tagline">{{ detail.tagline }}</p>
+  <p *ngIf="detail?.tagline">{{ detail.tagline }}</p>
   <img [src]="image" alt="bier illustration" class="bier-pic" />
   <p>{{ detail?.description }}</p>
   <h3>Goes with:</h3>

@@ -4,8 +4,6 @@ import { FavouritesService } from '../../favourites.service';
 
 import { Bier } from '../../bier.interface';
 
-import { Subscription } from 'rxjs';
-
 @Component({
   selector: 'app-favourites',
   templateUrl: './favourites.component.html',
@@ -18,7 +16,6 @@ export class FavouritesComponent implements OnInit {
 
   ngOnInit() {
     this.getFavourites();
-    console.log(this.favourites);
   }
 
   getFavourites() {
@@ -26,6 +23,8 @@ export class FavouritesComponent implements OnInit {
   }
 
   onUpdate() {
-    this.getFavourites();
+    setTimeout(() => {
+      this.getFavourites();
+    }, 400);
   }
 }

@@ -14,7 +14,6 @@ import { Subscription } from 'rxjs';
 })
 export class BiersComponent implements OnInit, OnDestroy {
   apiBiers: Bier[] = [];
-  // randomBier: Bier | null = null;
   surprise = false;
   isGettingBiers = false;
   randomSub: Subscription = Subscription.EMPTY;
@@ -40,64 +39,73 @@ export class BiersComponent implements OnInit, OnDestroy {
     }
   }
 
+  // Get random bier on Surpise me click
+  getRandom() {
+    this.clearCurrentBiers();
+    if (!this.isGettingBiers) {
+      this.isGettingBiers = true;
+      if (this.randomSub) {
+        this.randomSub.unsubscribe();
+      }
+      this.randomSub = this.biersService
+        .getRandomBier()
+        .subscribe((data: Bier[]) => {
+          this.assignBiers(data);
+          this.isGettingBiers = false;
+          this.surprise = true;
+        });
+    }
+  }
+
   // Get 50 beers on browse button click
   handleBrowse() {
-    if (this.surprise) {
-      this.surprise = false;
-    }
-    // Remove random bier from view
-    /*if (this.randomBier) {
-      this.randomBier = null;
-    }*/
+    this.clearCurrentBiers();
     if (!this.isGettingBiers) {
       this.isGettingBiers = true;
       if (this.browseSub) {
         this.browseSub.unsubscribe();
       }
-      //
-      // const favourites = this.favouritesService.getFavouritesFromStorage();
-      console.log('got favs in browse');
-      //
       this.browseSub = this.biersService
         .getBiers()
         .subscribe((data: Bier[]) => {
           this.assignBiers(data);
-          /*
-          data.forEach((bier: Bier) => {
-            const newBier: Bier = {
-              id: 0,
-              name: '',
-              tagline: '',
-              description: '',
-              image_url: null,
-              abv: 0,
-              food_pairing: [],
-              favourite: false,
-            };
-            newBier.id = bier.id;
-            newBier.name = bier.name;
-            newBier.tagline = bier.tagline;
-            newBier.description = bier.description;
-            newBier.image_url = bier.image_url;
-            newBier.abv = bier.abv;
-            newBier.food_pairing = bier.food_pairing;
-            if (favourites.some((fav: Bier) => fav.id === bier.id)) {
-              console.log(bier.id);
-              newBier.favourite = true;
-            }
-            this.apiBiers.push(newBier);
-          });*/
-          //          this.apiBiers = data;
           this.isGettingBiers = false;
         });
     }
   }
 
-  // refactor test
-  assignBiers(data: Bier[]) {
+  // Get biers by filters whenever filters are changed
+  onUpdateParams(params: string) {
+    this.clearCurrentBiers();
+    if (!this.isGettingBiers) {
+      this.isGettingBiers = true;
+      if (this.filterSub) {
+        this.filterSub.unsubscribe();
+      }
+      this.filterSub = this.biersService
+        .getByFilters(params)
+        .subscribe((data: Bier[]) => {
+          this.assignBiers(data);
+          this.isGettingBiers = false;
+          // Sort results to show favourites first
+          this.apiBiers.sort(
+            (a, b) => Number(b.favourite) - Number(a.favourite)
+          );
+          this.apiBiers.forEach((bier) => {});
+        });
+    }
+  }
+
+  clearCurrentBiers() {
+    if (this.surprise) {
+      this.surprise = false;
+    }
     if (this.apiBiers.length > 0) {
       this.apiBiers = [];
     }
+  }
+
+  assignBiers(data: Bier[]) {
     const favourites = this.favouritesService.getFavouritesFromStorage();
     data.forEach((bier: Bier) => {
       const newBier: Bier = {
@@ -118,69 +126,14 @@ export class BiersComponent implements OnInit, OnDestroy {
       newBier.abv = bier.abv;
       newBier.food_pairing = bier.food_pairing;
       if (favourites.some((fav: Bier) => fav.id === bier.id)) {
-        console.log(bier.id);
         newBier.favourite = true;
       }
       this.apiBiers.push(newBier);
     });
   }
 
-  // Get random bier on Surpise me click
-  getRandom() {
-    if (!this.isGettingBiers) {
-      this.isGettingBiers = true;
-      if (this.randomSub) {
-        this.randomSub.unsubscribe();
-      }
-      this.randomSub = this.biersService
-        .getRandomBier()
-        .subscribe((data: Bier[]) => {
-          // this.randomBier = data[0];
-          this.assignBiers(data);
-          this.isGettingBiers = false;
-          this.surprise = true;
-        });
-    }
-    // console.log('random bier is', this.randomBier);
-  }
-
-  // Get biers by filters whenever filters are changed
-  onUpdateParams(params: string) {
-    if (this.surprise) {
-      this.surprise = false;
-    }
-    // Remove random bier from view
-    /* if (this.randomBier) {
-      this.randomBier = null;
-    }*/
-    if (!this.isGettingBiers) {
-      this.isGettingBiers = true;
-      if (this.filterSub) {
-        this.filterSub.unsubscribe();
-      }
-      this.filterSub = this.biersService
-        .getByFilters(params)
-        .subscribe((data: Bier[]) => {
-          this.assignBiers(data);
-          // this.apiBiers = data;
-          this.isGettingBiers = false;
-          console.log('inside search return function');
-          this.apiBiers.sort(
-            (a, b) => Number(b.favourite) - Number(a.favourite)
-          );
-          this.apiBiers.forEach((bier) => {
-            console.log('apibiers is', bier.favourite);
-          });
-        });
-    }
-  }
-
   get noBiersFound() {
-    if (
-      this.apiBiers.length === 0 &&
-      // !this.randomBier &&
-      !this.isGettingBiers
-    ) {
+    if (this.apiBiers.length === 0 && !this.isGettingBiers) {
       return true;
     } else {
       return false;
