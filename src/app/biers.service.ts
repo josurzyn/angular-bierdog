@@ -19,6 +19,6 @@ export class BiersService {
   }
 
   getByFilters(params: string) {
-    return this.http.get<Bier[]>(`${this.baseUrl}?${params}`);
+    return this.http.get<Bier[]>(`${this.baseUrl}?${params}&per_page=50`);
   }
 }

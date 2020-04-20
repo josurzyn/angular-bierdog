@@ -1,9 +1,9 @@
 .single-bier {
   break-inside: avoid;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   max-width: 250px;
-  margin: 40px auto;
+  margin: 10px auto 30px;
   h3 {
     margin: 8px 0 4px;
   }

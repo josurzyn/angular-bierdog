@@ -15,11 +15,7 @@
 
 <div class="bier-container">
   <h3 *ngIf="surprise">Why not try a...</h3>
-  <app-bier-detail
-    class="detail-single"
-    *ngFor="let bier of apiBiers"
-    [detail]="bier"
-  >
+  <app-bier-detail *ngFor="let bier of apiBiers" [detail]="bier">
   </app-bier-detail>
 </div>
 

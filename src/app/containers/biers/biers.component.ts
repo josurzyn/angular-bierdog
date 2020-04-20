@@ -164,6 +164,13 @@ export class BiersComponent implements OnInit, OnDestroy {
           this.assignBiers(data);
           // this.apiBiers = data;
           this.isGettingBiers = false;
+          console.log('inside search return function');
+          this.apiBiers.sort(
+            (a, b) => Number(b.favourite) - Number(a.favourite)
+          );
+          this.apiBiers.forEach((bier) => {
+            console.log('apibiers is', bier.favourite);
+          });
         });
     }
   }
