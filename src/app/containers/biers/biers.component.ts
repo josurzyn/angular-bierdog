@@ -62,6 +62,7 @@ export class BiersComponent implements OnInit, OnDestroy {
 =======
   // Get random bier on Surpise me click
   getRandom() {
+    this.clearCurrentBiers();
     if (!this.isGettingBiers) {
       this.isGettingBiers = true;
       if (this.randomSub) {
