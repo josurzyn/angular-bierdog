@@ -51,7 +51,8 @@ export class BiersComponent implements OnInit, OnDestroy {
       this.randomSub = this.biersService
         .getRandomBier()
         .subscribe((data: Bier[]) => {
-          this.assignBiers(data);
+          // this.assignBiers(data);
+          this.apiBiers = data;
           this.isGettingBiers = false;
           this.surprise = true;
         });
@@ -90,7 +91,8 @@ export class BiersComponent implements OnInit, OnDestroy {
       this.browseSub = this.biersService
         .getBiers()
         .subscribe((data: Bier[]) => {
-          this.assignBiers(data);
+          // this.assignBiers(data);
+          this.apiBiers = data;
           this.isGettingBiers = false;
         });
     }
@@ -107,7 +109,8 @@ export class BiersComponent implements OnInit, OnDestroy {
       this.filterSub = this.biersService
         .getByFilters(params)
         .subscribe((data: Bier[]) => {
-          this.assignBiers(data);
+          this.apiBiers = data;
+          // this.assignBiers(data);
           this.isGettingBiers = false;
           // Sort results to show favourites first
           this.apiBiers.sort(
@@ -127,11 +130,12 @@ export class BiersComponent implements OnInit, OnDestroy {
     }
   }
 
-  assignBiers(data: Bier[]) {
+  // TODO: remove and make sure all being assigned in service
+  /*  assignBiers(data: Bier[]) {
     const favourites = this.favouritesService.getFavouritesFromStorage();
     data.forEach((bier: Bier) => {
       const newBier: Bier = {
-        id: 0,
+        id: bier.id,
         name: '',
         tagline: '',
         description: '',
@@ -152,7 +156,7 @@ export class BiersComponent implements OnInit, OnDestroy {
       }
       this.apiBiers.push(newBier);
     });
-  }
+  }*/
 
   get noBiersFound() {
     if (this.apiBiers.length === 0 && !this.isGettingBiers) {

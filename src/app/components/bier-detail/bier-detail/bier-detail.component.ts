@@ -32,11 +32,12 @@ export class BierDetailComponent {
     alt: 'full heart - bier is in favourites',
   };
 
-  favourites: Bier[] = [];
+  // favourites: Bier[] = [];
 
-  // Tells favourites component that input's changed
+  /* Tells favourites component that input's changed
   @Output()
   update: EventEmitter<any> = new EventEmitter<any>();
+  */
 
   constructor(private favouritesService: FavouritesService) {}
 
@@ -67,12 +68,12 @@ export class BierDetailComponent {
   favourite() {
     if (this.detail) {
       if (!this.detail.favourite) {
-        this.detail.favourite = true;
+        // this.detail.favourite = true;
         this.favouritesService.addBierToFavourites(this.detail);
       } else {
-        this.detail.favourite = false;
+        // this.detail.favourite = false;
         this.favouritesService.removeBierFromFavourites(this.detail);
-        this.update.emit();
+        // this.update.emit();
       }
     }
   }

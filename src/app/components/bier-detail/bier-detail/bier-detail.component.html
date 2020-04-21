@@ -9,11 +9,11 @@
     </button>
   </div>
 
-  <p *ngIf="detail?.tagline">{{ detail.tagline }}</p>
+  <p *ngIf="detail?.tagline">{{ detail?.tagline }}</p>
   <img [src]="image" alt="bier illustration" class="bier-pic" />
   <p>{{ detail?.description }}</p>
   <h3>Goes with:</h3>
   <ul>
-    <li *ngFor="let food of detail.food_pairing">{{ food }}</li>
+    <li *ngFor="let food of detail?.food_pairing">{{ food }}</li>
   </ul>
 </mat-card>
