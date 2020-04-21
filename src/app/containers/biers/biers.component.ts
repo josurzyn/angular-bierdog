@@ -90,7 +90,6 @@ export class BiersComponent implements OnInit, OnDestroy {
           this.apiBiers.sort(
             (a, b) => Number(b.favourite) - Number(a.favourite)
           );
-          this.apiBiers.forEach((bier) => {});
         });
     }
   }

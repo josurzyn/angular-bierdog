@@ -51,5 +51,5 @@ export class BiersService {
         favourite: fav,
       };
     });
-  };
+  }; // tslint:disable-line:semicolon
 }

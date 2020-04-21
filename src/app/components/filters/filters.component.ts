@@ -13,6 +13,7 @@ import { NgForm } from '@angular/forms';
 import { Search } from './search.interface';
 
 import { Subscription } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-filters',
@@ -44,9 +45,11 @@ export class FiltersComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     if (this.filtersForm && this.filtersForm.valueChanges) {
-      this.formSub = this.filtersForm.valueChanges.subscribe((form: Search) => {
-        this.updateFilters(form);
-      });
+      this.formSub = this.filtersForm.valueChanges
+        .pipe(debounceTime(200))
+        .subscribe((form: Search) => {
+          this.updateFilters(form);
+        });
     }
   }
 
