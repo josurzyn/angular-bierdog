@@ -39,7 +39,6 @@ export class BiersComponent implements OnInit, OnDestroy {
     }
   }
 
-<<<<<<< HEAD
   // Get random bier on Surpise me click
   getRandom() {
     this.clearCurrentBiers();
@@ -59,27 +58,6 @@ export class BiersComponent implements OnInit, OnDestroy {
     }
   }
 
-||||||| parent of 1e56956... feature#15: refactors feature
-=======
-  // Get random bier on Surpise me click
-  getRandom() {
-    this.clearCurrentBiers();
-    if (!this.isGettingBiers) {
-      this.isGettingBiers = true;
-      if (this.randomSub) {
-        this.randomSub.unsubscribe();
-      }
-      this.randomSub = this.biersService
-        .getRandomBier()
-        .subscribe((data: Bier[]) => {
-          this.assignBiers(data);
-          this.isGettingBiers = false;
-          this.surprise = true;
-        });
-    }
-  }
-
->>>>>>> 1e56956... feature#15: refactors feature
   // Get 50 beers on browse button click
   handleBrowse() {
     this.clearCurrentBiers();

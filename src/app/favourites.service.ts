@@ -11,14 +11,22 @@ export class FavouritesService {
   private favourites$$: BehaviorSubject<Bier[]> = new BehaviorSubject<Bier[]>(
     []
   );
+  private favouritesCount$$: BehaviorSubject<number> = new BehaviorSubject<
+    number
+  >(0);
 
   constructor() {
     this.favourites = this.getFavouritesFromStorage();
     this.favourites$$.next(this.favourites);
+    this.favouritesCount$$.next(this.favourites.length);
   }
 
   get favourites$() {
     return this.favourites$$.asObservable();
+  }
+
+  get favouritesCount$() {
+    return this.favouritesCount$$.asObservable();
   }
 
   getFavouritesFromStorage() {
@@ -46,6 +54,7 @@ export class FavouritesService {
     this.favourites.push(bier);
     this.setFavouritesInStorage(this.favourites);
     this.favourites$$.next(this.favourites);
+    this.favouritesCount$$.next(this.favourites.length);
   }
 
   removeBierFromFavourites(detail: Bier) {
@@ -55,6 +64,7 @@ export class FavouritesService {
     });
     this.setFavouritesInStorage(this.favourites);
     this.favourites$$.next(this.favourites);
+    this.favouritesCount$$.next(this.favourites.length);
     // TODO: refactor for observable/subject
     /* detail.favourite = false;
     const favourites = this.getFavouritesFromStorage().filter((bier: Bier) => {
