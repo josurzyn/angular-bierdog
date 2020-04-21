@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { FavouritesService } from '../../favourites.service';
 
@@ -16,11 +16,4 @@ export class FavouritesComponent {
   constructor(private favouritesService: FavouritesService) {
     this.favourites$ = this.favouritesService.favourites$;
   }
-
-  // TODO: remove?
-  // onUpdate() {
-  // setTimeout(() => {
-  //   this.getFavourites();
-  // }, 400);
-  // }
 }

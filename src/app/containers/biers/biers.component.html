@@ -8,8 +8,12 @@
 
 <app-filters (updateParams)="onUpdateParams($event)"> </app-filters>
 
+<div *ngIf="randomBier" class="centre-container">
+  <h3>Why not try a...</h3>
+  <app-bier-detail [detail]="randomBier"></app-bier-detail>
+</div>
+
 <div class="bier-container">
-  <h3 *ngIf="surprise">Why not try a...</h3>
   <app-bier-detail *ngFor="let bier of apiBiers" [detail]="bier">
   </app-bier-detail>
 </div>
@@ -19,4 +23,6 @@
   perfect brew.
 </div>
 
-<mat-spinner *ngIf="isGettingBiers"></mat-spinner>
+<div class="centre-container">
+  <mat-spinner *ngIf="isGettingBiers"></mat-spinner>
+</div>

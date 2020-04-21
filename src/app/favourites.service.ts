@@ -65,11 +65,5 @@ export class FavouritesService {
     this.setFavouritesInStorage(this.favourites);
     this.favourites$$.next(this.favourites);
     this.favouritesCount$$.next(this.favourites.length);
-    // TODO: refactor for observable/subject
-    /* detail.favourite = false;
-    const favourites = this.getFavouritesFromStorage().filter((bier: Bier) => {
-      return bier.id !== detail.id;
-    });
-    this.setFavouritesInStorage(favourites);*/
   }
 }
