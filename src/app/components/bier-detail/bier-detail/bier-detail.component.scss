@@ -35,6 +35,10 @@
       max-width: 44px;
       max-height: 44px;
       cursor: pointer;
+      transition: transform 0.4s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }
