@@ -6,13 +6,18 @@
     </div>
     <nav>
       <ul>
-        <li><a routerLink="/">Home</a></li>
+        <li>
+          <a routerLink="/"><p class="link-text">Home</p></a>
+        </li>
         <li>
           <a routerLink="/favourites"
-            >Favourites ({{ favouritesCount$ | async }})</a
+            ><p class="link-text">Favourites</p>
+            <span class="badge">{{ favouritesCount$ | async }}</span></a
           >
         </li>
-        <li><a routerLink="/about">About</a></li>
+        <li>
+          <a routerLink="/about"><p class="link-text">About</p></a>
+        </li>
       </ul>
     </nav>
   </div>
