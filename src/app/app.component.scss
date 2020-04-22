@@ -9,7 +9,7 @@ header {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-end;
-  max-width: 950px;
+  max-width: 1100px;
   margin: auto;
   h1 {
     margin: 0;
@@ -23,14 +23,39 @@ header {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
+    align-items: baseline;
     li {
       margin: 10px;
       a {
         font-size: 1.3em;
         color: #fff;
+        text-decoration: none;
+        position: relative;
       }
       a:hover {
         color: #c2c2c2;
+        .badge {
+          transform: scale(1.2);
+        }
+      }
+      .link-text {
+        text-decoration: underline;
+        display: inherit;
+      }
+      .badge {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #cf3067;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 15px;
+        left: 72px;
+        text-decoration: none;
+        transition: transform 0.4s ease-out;
       }
     }
   }

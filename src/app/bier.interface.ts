@@ -6,4 +6,5 @@ export interface Bier {
   image_url: string | null;
   abv: number;
   food_pairing?: string[];
+  favourite?: boolean;
 }

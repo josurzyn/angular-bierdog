@@ -1,9 +1,9 @@
 .single-bier {
   break-inside: avoid;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   max-width: 250px;
-  margin: 40px 10px;
+  margin: 10px auto 30px;
   h3 {
     margin: 8px 0 4px;
   }
@@ -21,5 +21,24 @@
   ul {
     margin: 0;
     padding: 0 0 0 20px;
+  }
+  .wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    .favourite {
+      border: none;
+      background-color: #fff;
+    }
+    .heart {
+      max-width: 44px;
+      max-height: 44px;
+      cursor: pointer;
+      transition: transform 0.4s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
   }
 }

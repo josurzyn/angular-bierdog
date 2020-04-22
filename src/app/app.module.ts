@@ -19,6 +19,7 @@ import { BiersComponent } from './containers/biers/biers.component';
 import { AboutComponent } from './components/about/about.component';
 import { BierDetailComponent } from './components/bier-detail/bier-detail/bier-detail.component';
 import { FiltersComponent } from './components/filters/filters.component';
+import { FavouritesComponent } from './containers/favourites/favourites.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FiltersComponent } from './components/filters/filters.component';
     AboutComponent,
     BierDetailComponent,
     FiltersComponent,
+    FavouritesComponent,
   ],
   imports: [
     BrowserModule,
