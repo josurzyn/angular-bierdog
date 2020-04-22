@@ -13,7 +13,7 @@
   <app-bier-detail [detail]="randomBier"></app-bier-detail>
 </div>
 
-<div class="bier-container">
+<div class="bier-container" *ngIf="apiBiers.length > 0">
   <app-bier-detail *ngFor="let bier of apiBiers" [detail]="bier">
   </app-bier-detail>
 </div>

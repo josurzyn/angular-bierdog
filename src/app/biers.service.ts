@@ -27,7 +27,7 @@ export class BiersService {
     return this.http.get<Bier[]>(`${this.baseUrl}/random`).pipe(
       map(this.formatBierResult),
       // tslint:disable-next-line:no-non-null-assertion
-      map((biers: Bier[]) => biers.shift()!)
+      map((biers) => biers.shift()!)
     );
   }
 
