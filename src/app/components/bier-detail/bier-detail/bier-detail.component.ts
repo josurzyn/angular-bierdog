@@ -1,10 +1,4 @@
-import {
-  Component,
-  Input,
-  ChangeDetectionStrategy,
-  Output,
-  EventEmitter,
-} from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 import { FavouritesService } from '../../../favourites.service';
 
@@ -32,16 +26,9 @@ export class BierDetailComponent {
     alt: 'full heart - bier is in favourites',
   };
 
-  // favourites: Bier[] = [];
-
-  /* Tells favourites component that input's changed
-  @Output()
-  update: EventEmitter<any> = new EventEmitter<any>();
-  */
-
   constructor(private favouritesService: FavouritesService) {}
 
-  get image(): string {
+  get image() {
     if (this.detail && this.detail.image_url) {
       return this.detail.image_url;
     } else {
@@ -49,7 +36,7 @@ export class BierDetailComponent {
     }
   }
 
-  get heartImg(): string {
+  get heartImg() {
     if (this.detail && this.detail.favourite) {
       return this.heartFill.src;
     } else {
@@ -68,12 +55,9 @@ export class BierDetailComponent {
   favourite() {
     if (this.detail) {
       if (!this.detail.favourite) {
-        // this.detail.favourite = true;
         this.favouritesService.addBierToFavourites(this.detail);
       } else {
-        // this.detail.favourite = false;
         this.favouritesService.removeBierFromFavourites(this.detail);
-        // this.update.emit();
       }
     }
   }
