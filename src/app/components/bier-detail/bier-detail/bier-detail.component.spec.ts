@@ -24,6 +24,28 @@ describe('BierDetailComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should get image url if available', () => {
+    component.detail = {
+      id: 0,
+      name: '',
+      abv: 0,
+      image_url: 'image',
+    };
+    const url = component.image;
+    expect(url).toBe('image');
+  });
+
+  it('should get placeholder if img url not available', () => {
+    component.detail = {
+      id: 0,
+      name: '',
+      abv: 0,
+      image_url: null,
+    };
+    const url = component.image;
+    expect(url).toBe('../assets/img/bier-dog-bottle.png');
+  });
+
   it('should get a full heart img for favourite', () => {
     component.detail = {
       id: 0,
@@ -70,28 +92,5 @@ describe('BierDetailComponent', () => {
     };
     const heartAlt = component.heartAlt;
     expect(heartAlt).toBe('blank heart - add bier to favourites');
-  });
-
-  it('should get image url if available', () => {
-    component.detail = {
-      id: 0,
-      name: '',
-      abv: 0,
-      image_url: 'image',
-    };
-    const url = component.image;
-    expect(url).toBe('image');
-  });
-
-  it('should get placeholder if img url not available', () => {
-    component.detail = {
-      id: 0,
-      name: '',
-      abv: 0,
-      image_url: null,
-    };
-    const url = component.image;
-    console.log(component.detail, url);
-    expect(url).toBe('../assets/img/bier-dog-bottle.png');
   });
 });

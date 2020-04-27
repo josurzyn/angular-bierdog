@@ -58,6 +58,20 @@ describe('BiersService', () => {
     expect(service).toBeTruthy();
   });
 
+  it('should return an Observable<Bier[]> to browse', (done) => {
+    service.getBiers().subscribe((apiBiers) => {
+      expect(apiBiers.length).toBe(3);
+      expect(apiBiers[0].name).toBe('first bier');
+      done();
+    });
+
+    const req = httpMock.expectOne(
+      'https://api.punkapi.com/v2/beers?per_page=50'
+    );
+    expect(req.request.method).toBe('GET');
+    req.flush(biers);
+  });
+
   it('should return a random Observable<Bier>', (done) => {
     const randomBier: Bier[] = [
       {
@@ -78,16 +92,16 @@ describe('BiersService', () => {
     req.flush(randomBier);
   });
 
-  it('should return an Observable<Bier[]> to browse', (done) => {
-    service.getBiers().subscribe((apiBiers) => {
+  it('should search using provided parameters', (done) => {
+    const testParams = 'abv_lt=56&abv_gt=0&food=chips&beer_name=pils';
+    service.getByFilters(testParams).subscribe((apiBiers) => {
       expect(apiBiers.length).toBe(3);
       done();
     });
 
     const req = httpMock.expectOne(
-      'https://api.punkapi.com/v2/beers?per_page=50'
+      'https://api.punkapi.com/v2/beers?abv_lt=56&abv_gt=0&food=chips&beer_name=pils&per_page=50'
     );
-    expect(req.request.method).toBe('GET');
     req.flush(biers);
   });
 
@@ -111,18 +125,5 @@ describe('BiersService', () => {
     const formattedBiers = service.formatBierResult(biers);
     expect(formattedBiers[0].favourite).toBeFalsy();
     expect(formattedBiers[1].favourite).toBeTruthy();
-  });
-
-  it('should search using provided parameters', (done) => {
-    const testParams = 'abv_lt=56&abv_gt=0&food=chips&beer_name=pils';
-    service.getByFilters(testParams).subscribe((apiBiers) => {
-      expect(apiBiers.length).toBe(3);
-      done();
-    });
-
-    const req = httpMock.expectOne(
-      'https://api.punkapi.com/v2/beers?abv_lt=56&abv_gt=0&food=chips&beer_name=pils&per_page=50'
-    );
-    req.flush(biers);
   });
 });

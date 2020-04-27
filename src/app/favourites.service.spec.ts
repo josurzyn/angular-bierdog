@@ -14,6 +14,7 @@ describe('FavouritesService', () => {
   };
 
   beforeEach(() => {
+    localStorage.favourites = JSON.stringify([]);
     TestBed.configureTestingModule({});
     service = TestBed.inject(FavouritesService);
   });
@@ -24,7 +25,6 @@ describe('FavouritesService', () => {
 
   it('should add bier to favourites', (done) => {
     service.addBierToFavourites(bier);
-
     service.favourites$.subscribe((biers) => {
       expect(biers.length).toBe(1);
       done();
@@ -32,12 +32,16 @@ describe('FavouritesService', () => {
   });
 
   it('should check if bier is a favourite', () => {
-    const isFav = service.isFavourite(bier);
+    let isFav = service.isFavourite(bier);
+    expect(isFav).toBeFalsy();
+    service.addBierToFavourites(bier);
+    isFav = service.isFavourite(bier);
     expect(isFav).toBeTruthy();
   });
 
   it('should get favourites$ Observable', (done) => {
     const favourites$ = service.favourites$;
+    service.addBierToFavourites(bier);
     favourites$.subscribe((biers) => {
       expect(biers).toEqual([
         {
@@ -54,6 +58,7 @@ describe('FavouritesService', () => {
 
   it('should get favouritesCount$ Observable', (done) => {
     const favouritesCount$ = service.favouritesCount$;
+    service.addBierToFavourites(bier);
     favouritesCount$.subscribe((count) => {
       expect(count).toBe(1);
       done();
@@ -61,8 +66,8 @@ describe('FavouritesService', () => {
   });
 
   it('should remove bier from favourites', (done) => {
+    service.addBierToFavourites(bier);
     service.removeBierFromFavourites(bier);
-
     service.favourites$.subscribe((biers) => {
       expect(biers.length).toBe(0);
       done();

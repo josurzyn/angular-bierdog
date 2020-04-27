@@ -26,4 +26,11 @@ describe('FavouritesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should get favourites using a favourites$ Observable', (done) => {
+    component.favourites$.subscribe((favourites) => {
+      expect(favourites.length).toBe(0);
+      done();
+    });
+  });
 });
