@@ -1,6 +1,6 @@
 <form #filtersForm="ngForm" class="filters">
   <div class="slider-wrapper">
-    <label for="minSlider"> {{ minValue }}% Min ABV </label>
+    <label for="minSlider" data-cy="min-label">{{ minValue }}% Min ABV</label>
     <mat-slider
       name="minSlider"
       [min]="min"
@@ -8,12 +8,13 @@
       [step]="step"
       [ngModel]="minValue"
       (input)="updateMinValue($event.value)"
+      data-cy="min"
     >
     </mat-slider>
   </div>
 
   <div class="slider-wrapper">
-    <label for="maxSlider"> {{ maxValue }}% Max ABV </label>
+    <label for="maxSlider" data-cy="max-label">{{ maxValue }}% Max ABV</label>
     <mat-slider
       name="maxSlider"
       [min]="minValue + 1"
@@ -21,13 +22,14 @@
       [step]="step"
       [ngModel]="maxValue"
       (input)="updateMaxValue($event.value)"
+      data-cy="max"
     >
     </mat-slider>
   </div>
 
   <mat-form-field>
     <mat-label>Style</mat-label>
-    <mat-select name="styleSearch" ngModel>
+    <mat-select name="styleSearch" ngModel data-cy="style">
       <mat-option>Any</mat-option>
       <mat-option *ngFor="let style of styles" [value]="style">
         {{ style }}
@@ -44,6 +46,7 @@
       placeholder="eg. chips"
       ngModel
       autocomplete="off"
+      data-cy="food"
     />
   </mat-form-field>
 </form>

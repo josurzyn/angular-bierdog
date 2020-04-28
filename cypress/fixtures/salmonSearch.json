@@ -1,0 +1,2326 @@
+[
+  {
+    "id": 33,
+    "name": "Sorachi Ace",
+    "tagline": "Single Hop IPA Series - 2011.",
+    "first_brewed": "01/2011",
+    "description": "A hop that tastes of bubble gum? Seriously? No, we did not believe it either. But it does! This is one unique, son of a bitch of a hop. Lemony, deep, musty with a smoothness that belies its power. This hop is lemony like a lemon who was angry earlier but is now tired because of all the rage. This hop of Japanese origin is best enjoyed trying to make sushi from your gold fish, or trying to persuade your girlfriend (or boyfriend maybe) to dress up as a Geisha for Valentine’s Day.",
+    "image_url": "https://images.punkapi.com/v2/33.png",
+    "abv": 7.5,
+    "ibu": 75,
+    "target_fg": 1013,
+    "target_og": 1068,
+    "ebc": 30,
+    "srm": 15,
+    "ph": 4.4,
+    "attenuation_level": 82.1,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": null
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 19,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 6.38,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Crystal 150",
+          "amount": {
+            "value": 0.13,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Caramalt",
+          "amount": {
+            "value": 0.25,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Sorachi Ace",
+          "amount": {
+            "value": 14.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Sorachi Ace",
+          "amount": {
+            "value": 20,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Sashimi",
+      "Grilled salmon with a herb and citrus infused butter",
+      "Basil, lemon and pine nut angel hair pasta with grilled chicken"
+    ],
+    "brewers_tips": "Sorachi Ace is hop best handled with care. Too much and your beer may taste like dill pickle and lemons.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 35,
+    "name": "Berliner Weisse With Raspberries And Rhubarb - B-Sides",
+    "tagline": "Fruity Berliner Weisse.",
+    "first_brewed": "11/2015",
+    "description": "Tart, dry and acidic with a punch of summer berry as rhubarb crumble.",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "abv": 3.6,
+    "ibu": 8,
+    "target_fg": 1007,
+    "target_og": 1040,
+    "ebc": null,
+    "srm": null,
+    "ph": 3.2,
+    "attenuation_level": 83,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 60,
+            "unit": "celsius"
+          },
+          "duration": 10
+        },
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 30
+        },
+        {
+          "temp": {
+            "value": 72,
+            "unit": "celsius"
+          },
+          "duration": 10
+        },
+        {
+          "temp": {
+            "value": 78,
+            "unit": "celsius"
+          },
+          "duration": 5
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 21,
+          "unit": "celsius"
+        }
+      },
+      "twist": "Raspberries in the boil, rhubarb at maturation. Soured naturally using the kettle souring technique, Raspberries at middle"
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Propino Pale Malt",
+          "amount": {
+            "value": 1.63,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Wheat Malt",
+          "amount": {
+            "value": 1.63,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Propino Pale Malt for kettle souring",
+          "amount": {
+            "value": 0.03,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Acidulated Malt for kettle souring",
+          "amount": {
+            "value": 0.03,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Bramling Cross",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "bitter"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Grilled salmon",
+      "Mac and cheese fries",
+      "Cheesecake with raspberry coulis"
+    ],
+    "brewers_tips": "Fruits added at the end of the boil for 10 mins and additional added in maturation. Boil for no more than 15 mins.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 37,
+    "name": "Zephyr",
+    "tagline": "There’s A Storm Brewing.",
+    "first_brewed": "10/2008",
+    "description": "A 9.2% Double IPA aged for 21 months in a 1965 Invergordon cask with 30 kg of fresh highland strawberries. This beer is a riot of whisky, caramel and strawberry, all tempered by a toe curling bitterness enducing rapture in all who taste it. Who needs champagne?",
+    "image_url": "https://images.punkapi.com/v2/37.png",
+    "abv": 12.5,
+    "ibu": 125,
+    "target_fg": 1016,
+    "target_og": 1087,
+    "ebc": 40,
+    "srm": 20,
+    "ph": 4.4,
+    "attenuation_level": 81.2,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 75
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 21,
+          "unit": "celsius"
+        }
+      },
+      "twist": "Oak chips: 15g, Fresh strawberries: 3kg"
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 6.3,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Caramalt",
+          "amount": {
+            "value": 0.38,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Crystal 150",
+          "amount": {
+            "value": 0.29,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Columbus Extract",
+          "amount": {
+            "value": 31,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Columbus",
+          "amount": {
+            "value": 19.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Columbus",
+          "amount": {
+            "value": 19.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Centennial",
+          "amount": {
+            "value": 19.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 19.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Columbus",
+          "amount": {
+            "value": 19.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Centennial",
+          "amount": {
+            "value": 19.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Centennial",
+          "amount": {
+            "value": 115.5,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Columbus",
+          "amount": {
+            "value": 96,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 96,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Amarillo",
+          "amount": {
+            "value": 77,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        }
+      ],
+      "yeast": "Wyeast 1272 - American Ale II™"
+    },
+    "food_pairing": [
+      "Poached eggs and smoked salmon",
+      "Salt and pepper squid",
+      "Key Lime Pie"
+    ],
+    "brewers_tips": "Rack into a secondary fermenter and add your strawberries. Use a blow-off rather than an airlock as the fermentation can get pretty wild as the yeast starts using the sugar from the strawberries.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 64,
+    "name": "Sub Hop",
+    "tagline": "Hopped-Up Imperial Pilsner.",
+    "first_brewed": "06/2014",
+    "description": "Brewed for the opening of our first bar in Italy, BrewDog Firenze. A mega-hoppy Imperial Pilsner, with toasty malt complexity and tropical New World hops.",
+    "image_url": "https://images.punkapi.com/v2/64.png",
+    "abv": 8,
+    "ibu": 35,
+    "target_fg": 1016,
+    "target_og": 1077,
+    "ebc": 15,
+    "srm": 7.5,
+    "ph": 4.4,
+    "attenuation_level": 79.2,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": null
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 9,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 6.25,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Munich",
+          "amount": {
+            "value": 0.25,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Dextrose",
+          "amount": {
+            "value": 0.38,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Saaz",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Hallertauer Mittelfrüh",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Pacifica",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Pacific Jade",
+          "amount": {
+            "value": 25,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Pacifica",
+          "amount": {
+            "value": 25,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Pacific Jade",
+          "amount": {
+            "value": 75,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Pacifica",
+          "amount": {
+            "value": 37.5,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        }
+      ],
+      "yeast": "Wyeast 2007 - Pilsen Lager™"
+    },
+    "food_pairing": [
+      "Seared lemon and herb salmon",
+      "Crab linguine",
+      "Almond biscotti"
+    ],
+    "brewers_tips": "Sit this beer aside for a month to allow it to mellow.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 72,
+    "name": "Whisky Sour - B-Sides",
+    "tagline": "Pilot Brew - Deconstructed Whisky Sour.",
+    "first_brewed": "03/2015",
+    "description": "Deconstructed whisky sour, reconstructed as a beer.",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "abv": 7,
+    "ibu": 20,
+    "target_fg": 1021,
+    "target_og": 1081,
+    "ebc": 12,
+    "srm": 6,
+    "ph": 3.2,
+    "attenuation_level": 74,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 60,
+            "unit": "celsius"
+          },
+          "duration": 10
+        },
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 30
+        },
+        {
+          "temp": {
+            "value": 72,
+            "unit": "celsius"
+          },
+          "duration": 10
+        },
+        {
+          "temp": {
+            "value": 78,
+            "unit": "celsius"
+          },
+          "duration": 5
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": null,
+          "unit": "celsius"
+        }
+      },
+      "twist": "Kettle Soured"
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 6.88,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Acidulated Malt",
+          "amount": {
+            "value": 1.88,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Wheat Malt",
+          "amount": {
+            "value": 1.25,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Rye",
+          "amount": {
+            "value": 0.25,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Special W",
+          "amount": {
+            "value": 0.05,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Amarillo",
+          "amount": {
+            "value": 8.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 8.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 8.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Amarillo",
+          "amount": {
+            "value": 5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Amarillo",
+          "amount": {
+            "value": 1.5,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 1.5,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 1.5,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        }
+      ],
+      "yeast": "Wyeast 1272 - American Ale II™"
+    },
+    "food_pairing": [
+      "Potted fresh & smoked salmon",
+      "Spiced nut loaf",
+      "Lemon poppyseed donuts"
+    ],
+    "brewers_tips": "Lemon poppyseed donuts.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 89,
+    "name": "Citra",
+    "tagline": "Single Hop IPA Series – 2011.",
+    "first_brewed": "01/2011",
+    "description": "The Pacific North West of America is home to the Citra hop. America is not just about cheer leaders, a silly version of football, elastic top jeans and cheeseburgers. They grow remarkable hops and Citra is a killer example of this, embodying all that is good about American hops and then some. Fearfully hard to resist, this beer is loaded with brash citrus, grapefruit, orange, hints of resinous pine and touches of blackcurrant. Devilishly moreish.",
+    "image_url": "https://images.punkapi.com/v2/89.png",
+    "abv": 7.5,
+    "ibu": 70,
+    "target_fg": 1013,
+    "target_og": 1068,
+    "ebc": 30,
+    "srm": 15,
+    "ph": 4.4,
+    "attenuation_level": 82.1,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": null
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 19,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 6.38,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Crystal 150",
+          "amount": {
+            "value": 0.13,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Caramalt",
+          "amount": {
+            "value": 0.25,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 2.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 37.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Lemon and herb salmon",
+      "Sharp cheddar with mango chutney",
+      "Shredded chicken tacos with pico de gallo"
+    ],
+    "brewers_tips": "Another hop to be treated with respect. Too much in the kettle or dry hop will turn the beer into a garlicky disaster.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 145,
+    "name": "Sorachi Bitter - B-Sides",
+    "tagline": "Sorachi Ace Bitter.",
+    "first_brewed": "03/2015",
+    "description": "Pilot Brew: A twist on an English Bitter style beer, using Sorachi Ace hops throughout making a showcase of the off the dill and lemon character.",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "abv": 6.3,
+    "ibu": 130,
+    "target_fg": 1010,
+    "target_og": 1060,
+    "ebc": 14,
+    "srm": 7,
+    "ph": 5.2,
+    "attenuation_level": 83,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 60,
+            "unit": "celsius"
+          },
+          "duration": 10
+        },
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 30
+        },
+        {
+          "temp": {
+            "value": 72,
+            "unit": "celsius"
+          },
+          "duration": 10
+        },
+        {
+          "temp": {
+            "value": 78,
+            "unit": "celsius"
+          },
+          "duration": 5
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 20,
+          "unit": "celsius"
+        }
+      },
+      "twist": "This beer was unfiltered to give it a traditional ale appearance, Indian Coriander: 2.5g at end"
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 4.38,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Crystal 150",
+          "amount": {
+            "value": 0.16,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Dark Crystal",
+          "amount": {
+            "value": 0.16,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Munich",
+          "amount": {
+            "value": 1.25,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Rye",
+          "amount": {
+            "value": 0.63,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Galena",
+          "amount": {
+            "value": 17.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Sorachi Ace",
+          "amount": {
+            "value": 17.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Ella",
+          "amount": {
+            "value": 17.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Galena",
+          "amount": {
+            "value": 17.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Sorachi Ace",
+          "amount": {
+            "value": 17.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Ella",
+          "amount": {
+            "value": 17.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Galena",
+          "amount": {
+            "value": 17.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Sorachi Ace",
+          "amount": {
+            "value": 17.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Ella",
+          "amount": {
+            "value": 17.5,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Galena",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Sorachi Ace",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Ella",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Greek piroshki pies",
+      "Poached salmon with salsa verde",
+      "Strawberry filo tarts"
+    ],
+    "brewers_tips": "The touch of rye adds a great touch of spice that plays off the hops really well.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 191,
+    "name": "Interstellar",
+    "tagline": "2013 Prototype Red Rye IPA.",
+    "first_brewed": "11/2013",
+    "description": "Interstellar is a Red Rye IPA with spicy rye flavours from the malt and with great all-round spicy, fruity and earthy hop aromas from the use of Willamette and Amarillo.",
+    "image_url": "https://images.punkapi.com/v2/191.png",
+    "abv": 6.5,
+    "ibu": 55,
+    "target_fg": 1011,
+    "target_og": 1059,
+    "ebc": 50,
+    "srm": 25,
+    "ph": 4.4,
+    "attenuation_level": 81.4,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 75
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 19,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 3.81,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Rye",
+          "amount": {
+            "value": 0.5,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Crystal 150",
+          "amount": {
+            "value": 0.56,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Dark Crystal",
+          "amount": {
+            "value": 0.19,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Acidulated Malt",
+          "amount": {
+            "value": 0.13,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Magnum",
+          "amount": {
+            "value": 25,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Willamette",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Amarillo",
+          "amount": {
+            "value": 12.5,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Willamette",
+          "amount": {
+            "value": 25,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Amarillo",
+          "amount": {
+            "value": 25,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Amarillo",
+          "amount": {
+            "value": 125,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Willamette",
+          "amount": {
+            "value": 125,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Oak chip smoked salmon",
+      "Sticky spicy barbecue ribs",
+      "Scottish tablet"
+    ],
+    "brewers_tips": "Be careful with the rye malt in the run off. It can lead to stuck mashes and extended collection periods.",
+    "contributed_by": "Ali Skinner <AliSkinner>"
+  },
+  {
+    "id": 193,
+    "name": "Blitz Berliner Weisse",
+    "tagline": "Berliner Fruit Beer.",
+    "first_brewed": "07/2013",
+    "description": "Our sour recipe for all fruit Blitz beers uses a process called kettle souring. In this we steep a bag of malt in the wort to allow the bacteria to grow in it.",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "abv": 3,
+    "ibu": 8,
+    "target_fg": 1040,
+    "target_og": 1007,
+    "ebc": 9,
+    "srm": 4.5,
+    "ph": 3.2,
+    "attenuation_level": 82.5,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 60
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 19,
+          "unit": "celsius"
+        }
+      },
+      "twist": "Before main fermentation steep a bag of malt in the wort for 48 hours. Re boil the wort before pitching in the yeast for the main fermentation."
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 1.88,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Wheat",
+          "amount": {
+            "value": 1.88,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Magnum",
+          "amount": {
+            "value": 8.5,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Grilled salmon with a light lemon sauce",
+      "Lobster bisque",
+      "Cheesecake with raspberry (or peach/passion fruit) sauce"
+    ],
+    "brewers_tips": "Making sour beers is an art, and is mostly related to trial and error with your process. Experiment with different temperatures for steeping the grain. 40 - 50°C willallow the lacto to grow and produce a clean profile.",
+    "contributed_by": "Ali Skinner <AliSkinner>"
+  },
+  {
+    "id": 223,
+    "name": "Prototype Pils 2.0",
+    "tagline": "Revamped German Pils.",
+    "first_brewed": "06/2016",
+    "description": "Our spin on a light, dry and bitter German lager. Hop driven with malt taking a back seat, Pils 2.0 is lined up to become a regular brew.",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "abv": 4.7,
+    "ibu": 25,
+    "target_fg": 1044,
+    "target_og": 1008,
+    "ebc": 25,
+    "srm": 5,
+    "ph": 4.2,
+    "attenuation_level": 75.6,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 75
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 12,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Pilsner",
+          "amount": {
+            "value": 1.3,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Caramalt",
+          "amount": {
+            "value": 0.12,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Munich",
+          "amount": {
+            "value": 0.5,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Pale Ale",
+          "amount": {
+            "value": 1.2,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Magnum",
+          "amount": {
+            "value": 4,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Perle",
+          "amount": {
+            "value": 20,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Perle",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "aroma"
+        }
+      ],
+      "yeast": "Wyeast 2007 - Pilsen Lager™"
+    },
+    "food_pairing": [
+      "Tuna & salmon sushi (with plenty of wasabi!)",
+      "Chipotle chicken burrito",
+      "Rhubarb fool with shortbread"
+    ],
+    "brewers_tips": "Allow plenty of time for lagering with this brew to make sure you get the clean and crisp flavour profile.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 229,
+    "name": "Rye Hammer",
+    "tagline": "Our Ruthless IPA with A Spicy Twist.",
+    "first_brewed": "06/2016",
+    "description": "Rye Hammer is the fourth of our super-charged hyped up hybrids. A bready beery beast. Rye grains and American hops unite in an agricultural superpower. Aroma of roasted malts, rye bread and subtle floral hops. Grapefruit, roasted caramel with malty fruity notes, followed by the bitterest of bitter finishes. Rye Hammer – liquid daily bread.",
+    "image_url": "https://images.punkapi.com/v2/229.png",
+    "abv": 7.2,
+    "ibu": 250,
+    "target_fg": 1010,
+    "target_og": 1065,
+    "ebc": 17,
+    "srm": 8.5,
+    "ph": 4.4,
+    "attenuation_level": 84.6,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 75
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 21,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Extra Pale",
+          "amount": {
+            "value": 5,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Rye",
+          "amount": {
+            "value": 1,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Centennial",
+          "amount": {
+            "value": 25,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Columbus Extract",
+          "amount": {
+            "value": 30,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        },
+        {
+          "name": "Centennial",
+          "amount": {
+            "value": 18.75,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Columbus",
+          "amount": {
+            "value": 18.75,
+            "unit": "grams"
+          },
+          "add": "middle",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Centennial",
+          "amount": {
+            "value": 50,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Columbus",
+          "amount": {
+            "value": 25,
+            "unit": "grams"
+          },
+          "add": "end",
+          "attribute": "flavour"
+        },
+        {
+          "name": "Amarillo",
+          "amount": {
+            "value": 100,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 100,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 100,
+            "unit": "grams"
+          },
+          "add": "dry hop",
+          "attribute": "aroma"
+        }
+      ],
+      "yeast": "Wyeast 1272 - American Ale II™"
+    },
+    "food_pairing": ["Smoked salmon tostada", "Schäufele", "Rye apple cake"],
+    "brewers_tips": "The amount of rye shouldn’t cause a stuck mash, but if you find you are having problems the addition of rice hulls to your mash can help.",
+    "contributed_by": "Sam Mason <samjbmason>"
+  },
+  {
+    "id": 250,
+    "name": "Small Batch: Rye IPA",
+    "tagline": "Rye India Pale Ale.",
+    "first_brewed": "2016",
+    "description": "A 7.2% rye IPA loaded with grapefruit notes, pithy citrus, and huge resinous bitterness, with rye character. The Centennial and Columbus flavours are amplified by the spicy, dry rye.",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "abv": 7.2,
+    "ibu": 100,
+    "target_fg": 1010,
+    "target_og": 1065,
+    "ebc": 8,
+    "srm": 16,
+    "ph": 4.4,
+    "attenuation_level": 84,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 60,
+            "unit": "celsius"
+          },
+          "duration": 30
+        },
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 20
+        },
+        {
+          "temp": {
+            "value": 72,
+            "unit": "celsius"
+          },
+          "duration": 15
+        },
+        {
+          "temp": {
+            "value": 78,
+            "unit": "celsius"
+          },
+          "duration": 10
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 21,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Maris Otter",
+          "amount": {
+            "value": 4,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Rye",
+          "amount": {
+            "value": 0.8,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Centennial",
+          "amount": {
+            "value": 40,
+            "unit": "grams"
+          },
+          "add": "60",
+          "attribute": "Bitter"
+        },
+        {
+          "name": "Centennial",
+          "amount": {
+            "value": 15,
+            "unit": "grams"
+          },
+          "add": "15",
+          "attribute": "Bitter"
+        },
+        {
+          "name": "Columbus",
+          "amount": {
+            "value": 15,
+            "unit": "grams"
+          },
+          "add": "15",
+          "attribute": "Flavour"
+        },
+        {
+          "name": "Centennial",
+          "amount": {
+            "value": 50,
+            "unit": "grams"
+          },
+          "add": "Whirlpool",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Columbus",
+          "amount": {
+            "value": 25,
+            "unit": "grams"
+          },
+          "add": "Whirlpool",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Columbus",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        }
+      ],
+      "yeast": "Wyeast 1272 - American Ale II™"
+    },
+    "food_pairing": [
+      "Salmon Fishcakes with Rocket Salad",
+      "Baked Goat's Cheese",
+      "Classic Victoria Sponge"
+    ],
+    "brewers_tips": "Be prepared for a long sparge as the rye content is really high.",
+    "contributed_by": "John Jenkman <johnjenkman>"
+  },
+  {
+    "id": 269,
+    "name": "Small Batch: Imperial Pale Weizen",
+    "tagline": "Dry-Hopped Wheat Beer.",
+    "first_brewed": "2017",
+    "description": "An amplified version of a style we first brewed with Weihenstephan. A full-on deluge of spice and citrus, the new world hops bring spiced orange, lemon peel and fresh grassy and floral notes while the weizen base adds pepper, clove and banana.",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "abv": 7.5,
+    "ibu": 25,
+    "target_fg": 1010,
+    "target_og": 1067,
+    "ebc": 18,
+    "srm": 9,
+    "ph": 4.4,
+    "attenuation_level": 85,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 90
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 21,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Maris Otter",
+          "amount": {
+            "value": 3.74,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "White Wheat",
+          "amount": {
+            "value": 2.267,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Extra Dark Crystal",
+          "amount": {
+            "value": 0.091,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Magnum",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "60",
+          "attribute": "Bitter"
+        },
+        {
+          "name": "Ariana",
+          "amount": {
+            "value": 12,
+            "unit": "grams"
+          },
+          "add": "15",
+          "attribute": "Flavour"
+        },
+        {
+          "name": "Cascade",
+          "amount": {
+            "value": 12,
+            "unit": "grams"
+          },
+          "add": "15",
+          "attribute": "Flavour"
+        },
+        {
+          "name": "Mandarina Bavaria",
+          "amount": {
+            "value": 12,
+            "unit": "grams"
+          },
+          "add": "15",
+          "attribute": "Flavour"
+        },
+        {
+          "name": "Ariana",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Mandarina Bavaria",
+          "amount": {
+            "value": 10,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Flavour"
+        }
+      ],
+      "yeast": "WLP351 - Bavarian Weizen"
+    },
+    "food_pairing": [
+      "Soft pretzel with mustard",
+      "Hot Smoked Salmon Salad",
+      "Rum Fried Banana"
+    ],
+    "brewers_tips": "A German style wheat beer that is mostly defined by its yeast character. Yeast strain has a massive influence on the final perception of the beer.",
+    "contributed_by": "John Jenkman <johnjenkman>"
+  },
+  {
+    "id": 277,
+    "name": "Prototype Blonde Ale",
+    "tagline": "Mellow Golden Ale.",
+    "first_brewed": "2017",
+    "description": "This Blonde Ale is a new recipe and uses a new yeast - so it is a true Prototype. Originally lined up as part of the 2017 Prototype Challenge it was released shortly afterwards. but hey, these things happen.",
+    "image_url": null,
+    "abv": 4.5,
+    "ibu": 15,
+    "target_fg": 1009,
+    "target_og": 1044,
+    "ebc": 12,
+    "srm": 6,
+    "ph": 4.6,
+    "attenuation_level": 80,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 67,
+            "unit": "celsius"
+          },
+          "duration": 60
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 19,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Pale Ale",
+          "amount": {
+            "value": 3.3,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Wheat",
+          "amount": {
+            "value": 0.3,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Carapils",
+          "amount": {
+            "value": 0.24,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Perle",
+          "amount": {
+            "value": 70,
+            "unit": "grams"
+          },
+          "add": "70",
+          "attribute": "Bittering"
+        },
+        {
+          "name": "Hallertauer Mittelfrüh",
+          "amount": {
+            "value": 20,
+            "unit": "grams"
+          },
+          "add": "15",
+          "attribute": "Flavour"
+        }
+      ],
+      "yeast": "WLP013 - London Ale"
+    },
+    "food_pairing": ["Salmon Salad", "Montery Jack Cheese", "Mandarin Cake"],
+    "brewers_tips": "This yeast strain produces a marked sulphurous note in the beer. If that’s not your thing, don’t Burtonise your mash and see the difference!",
+    "contributed_by": "John Jenkman <johnjenkman>"
+  },
+  {
+    "id": 286,
+    "name": "Hello My Name Is Aune",
+    "tagline": "Stawberry Double IPA.",
+    "first_brewed": "2017",
+    "description": "Brewed exclusively for the Norwegian market, this Hello My Name brew features a twist of flavour inspired by Norway.",
+    "image_url": null,
+    "abv": 8.2,
+    "ibu": 70,
+    "target_fg": 1009,
+    "target_og": 1070,
+    "ebc": 15,
+    "srm": 8,
+    "ph": 4.4,
+    "attenuation_level": 87,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 66,
+            "unit": "celsius"
+          },
+          "duration": 65
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 19,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Pale Ale",
+          "amount": {
+            "value": 5.52,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Caramalt",
+          "amount": {
+            "value": 0.12,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 24,
+            "unit": "grams"
+          },
+          "add": "90",
+          "attribute": "Bittering"
+        },
+        {
+          "name": "Chinook",
+          "amount": {
+            "value": 20,
+            "unit": "grams"
+          },
+          "add": "30",
+          "attribute": "Flavour"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 30,
+            "unit": "grams"
+          },
+          "add": "0",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Fresh Strawberries",
+          "amount": {
+            "value": 2000,
+            "unit": "grams"
+          },
+          "add": "Flame Out",
+          "attribute": "Flavour"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 40,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Chinook",
+          "amount": {
+            "value": 40,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Simcoe",
+          "amount": {
+            "value": 40,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Centennial",
+          "amount": {
+            "value": 20,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        }
+      ],
+      "yeast": "Wyeast 1272 - American Ale II™"
+    },
+    "food_pairing": [
+      "Spinach and feta salad",
+      "Balsamic-glazed salmon",
+      "Basil granita"
+    ],
+    "brewers_tips": "Strawberry is a very delicate flavour, so don’t shy away with putting a lot more in when you dry hop.",
+    "contributed_by": "John Jenkman <johnjenkman>"
+  },
+  {
+    "id": 301,
+    "name": "Small Batch: Dry-hopped Pilsner",
+    "tagline": "Dry-hopped lager.",
+    "first_brewed": "2018",
+    "description": "A BrewDog bar exclusive draft lager, brewed with Weihenstephan's lager yeast, and dry-hopped with the contemporary German variety Saphir; this lager has been lightly centrifuged and packaged at just under 28 days in tank.",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "abv": 4.7,
+    "ibu": 37,
+    "target_fg": 1006,
+    "target_og": 1042,
+    "ebc": 5,
+    "srm": 3,
+    "ph": 4.4,
+    "attenuation_level": 86,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 65,
+            "unit": "celsius"
+          },
+          "duration": 50
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 11,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Pilsner",
+          "amount": {
+            "value": 3.36,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Carapils",
+          "amount": {
+            "value": 0.24,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Magnum",
+          "amount": {
+            "value": 12,
+            "unit": "grams"
+          },
+          "add": "70",
+          "attribute": "Bittering"
+        },
+        {
+          "name": "Spalter",
+          "amount": {
+            "value": 15,
+            "unit": "grams"
+          },
+          "add": "30",
+          "attribute": "Flavour"
+        },
+        {
+          "name": "Spalter",
+          "amount": {
+            "value": 15,
+            "unit": "grams"
+          },
+          "add": "10",
+          "attribute": "Flavour"
+        },
+        {
+          "name": "Saphire",
+          "amount": {
+            "value": 30,
+            "unit": "grams"
+          },
+          "add": "0",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Saphire",
+          "amount": {
+            "value": 30,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        }
+      ],
+      "yeast": "Saflager W-34/70"
+    },
+    "food_pairing": [
+      "Grilled salmon tacos",
+      "Chicken and pesto pasta",
+      "Ham and mustard crisps"
+    ],
+    "brewers_tips": "Before dry hopping, if you aren't happy with the \"green\" beer, drink it (or dump it) and make a new one to avoid wasting your premium hops on something flawed.",
+    "contributed_by": "John Jenkman <johnjenkman>"
+  },
+  {
+    "id": 314,
+    "name": "Manic Mango",
+    "tagline": "Mango IPA.",
+    "first_brewed": "2018",
+    "description": "BrewDog v Brewski. One of a series of collaborations with European craft breweries, aimed at promoting engagement and market growth. Our Swedish collaboration with Brewski is a mango IPA.",
+    "image_url": null,
+    "abv": 6,
+    "ibu": 20,
+    "target_fg": 1010,
+    "target_og": 1057,
+    "ebc": 12,
+    "srm": 6,
+    "ph": 4.4,
+    "attenuation_level": 82,
+    "volume": {
+      "value": 20,
+      "unit": "litres"
+    },
+    "boil_volume": {
+      "value": 25,
+      "unit": "litres"
+    },
+    "method": {
+      "mash_temp": [
+        {
+          "temp": {
+            "value": 63,
+            "unit": "celsius"
+          },
+          "duration": 35
+        }
+      ],
+      "fermentation": {
+        "temp": {
+          "value": 19,
+          "unit": "celsius"
+        }
+      },
+      "twist": null
+    },
+    "ingredients": {
+      "malt": [
+        {
+          "name": "Pale Ale",
+          "amount": {
+            "value": 3.96,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Uncrushed Wheat",
+          "amount": {
+            "value": 0.6,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Flaked Oats",
+          "amount": {
+            "value": 0.6,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Magnum",
+          "amount": {
+            "value": 2,
+            "unit": "grams"
+          },
+          "add": "65",
+          "attribute": "Bittering"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 20,
+            "unit": "grams"
+          },
+          "add": "10",
+          "attribute": "Flavour"
+        },
+        {
+          "name": "Amarillo",
+          "amount": {
+            "value": 40,
+            "unit": "grams"
+          },
+          "add": "0",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Nelson Sauvin",
+          "amount": {
+            "value": 40,
+            "unit": "grams"
+          },
+          "add": "0",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 40,
+            "unit": "grams"
+          },
+          "add": "0",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Idaho 7",
+          "amount": {
+            "value": 60,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Nelson Sauvin",
+          "amount": {
+            "value": 80,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Citra",
+          "amount": {
+            "value": 60,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        },
+        {
+          "name": "Mango Puree",
+          "amount": {
+            "value": 1000,
+            "unit": "grams"
+          },
+          "add": "Dry Hop",
+          "attribute": "Aroma"
+        }
+      ],
+      "yeast": "Wyeast 1056 - American Ale™"
+    },
+    "food_pairing": [
+      "Green Thai curry",
+      "Salmon with mango salsa",
+      "Pho soup with light rice noodles"
+    ],
+    "brewers_tips": "Add the mango puree towards the end of primary fermentation, about 10 SG points above your FG. Allow it to reach FG and have a diacetyl rest before dry hopping it.",
+    "contributed_by": "John Jenkman <johnjenkman>"
+  }
+]

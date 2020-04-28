@@ -1,11 +1,11 @@
-<mat-card class="single-bier" *ngIf="detail">
+<mat-card class="single-bier" *ngIf="detail" data-cy="bier-card">
   <div class="wrapper">
     <div class="bier-title">
-      <h3>{{ detail?.name }}</h3>
+      <h3 data-cy="bier-name">{{ detail?.name }}</h3>
       <p>{{ detail?.abv }}% ABV</p>
     </div>
-    <button class="favourite" (click)="favourite()">
-      <img [src]="heartImg" alt="heartAlt" class="heart" />
+    <button class="favourite" (click)="favourite()" data-cy="favourite">
+      <img [src]="heartImg" [alt]="heartAlt" class="heart" data-cy="heartImg" />
     </button>
   </div>
 
@@ -14,6 +14,8 @@
   <p>{{ detail?.description }}</p>
   <h3>Goes with:</h3>
   <ul>
-    <li *ngFor="let food of detail?.food_pairing">{{ food }}</li>
+    <li *ngFor="let food of detail?.food_pairing" data-cy="food-match">
+      {{ food }}
+    </li>
   </ul>
 </mat-card>
