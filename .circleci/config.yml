@@ -1,6 +1,8 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
+  # use Cypress orb for e2e
+  cypress: cypress-io/cypress@1
 jobs:
   lint:
     executor:
@@ -20,7 +22,6 @@ jobs:
           steps:
             - run: npm install
             - run: npm run test
-            - run: ng e2e
   build:
     executor:
       name: node/default
@@ -37,6 +38,11 @@ workflows:
   test:
     jobs:
       - test
+  e2e:
+    jobs:
+      - cypress/run:
+          start: npm start
+          wait-on: 'http://localhost:4200'
   build:
     jobs:
       - build
