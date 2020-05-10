@@ -1,0 +1,44 @@
+[
+  {
+    "id": 64,
+    "name": "Sub Hop",
+    "tagline": "Hopped-Up Imperial Pilsner.",
+    "description": "Brewed for the opening of our first bar in Italy, BrewDog Firenze. A mega-hoppy Imperial Pilsner, with toasty malt complexity and tropical New World hops.",
+    "image_url": "https://images.punkapi.com/v2/64.png",
+    "abv": 8,
+    "food_pairing": [
+      "Seared lemon and herb salmon",
+      "Crab linguine",
+      "Almond biscotti"
+    ],
+    "favourite": true
+  },
+  {
+    "id": 231,
+    "name": "Ace Of Chinook",
+    "tagline": "Single-Hopped Session IPA.",
+    "description": "We love hops. We adore and worship their profile ability to transform beer. You could say that we have a terminal addiction. To celebrate this fetish we’re heroing our favourites in single hopped limited releases. No also starring, no extras, no compromise. The Hop is the Hero. A biscuity malty backbone builds to intense resinous pine with pithy citrus notes, culminating in a grapefruit hit and a long bitter finish. Our Ace in the hole, devastatingly singular, deliciously bitter. Serving up an Ace each and every time.",
+    "image_url": "https://images.punkapi.com/v2/231.png",
+    "abv": 4.5,
+    "food_pairing": [
+      "Cheese covered tater tots",
+      "Chicago style hot dog",
+      "Beignet"
+    ],
+    "favourite": true
+  },
+  {
+    "id": 24,
+    "name": "The End Of History",
+    "tagline": "The World's Strongest Beer.",
+    "description": "The End of History: The name derives from the famous work of philosopher Francis Fukuyama, this is to beer what democracy is to history. Complexity defined. Floral, grapefruit, caramel and cloves are intensified by boozy heat.",
+    "image_url": "https://images.punkapi.com/v2/24.png",
+    "abv": 55,
+    "food_pairing": [
+      "Roasted wood pigeon with black pudding",
+      "Pan seared venison fillet with juniper sauce",
+      "Apricot coconut cake"
+    ],
+    "favourite": true
+  }
+]

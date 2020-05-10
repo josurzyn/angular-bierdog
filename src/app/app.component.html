@@ -7,16 +7,22 @@
     <nav>
       <ul>
         <li>
-          <a routerLink="/"><p class="link-text">Home</p></a>
-        </li>
-        <li>
-          <a routerLink="/favourites"
-            ><p class="link-text">Favourites</p>
-            <span class="badge">{{ favouritesCount$ | async }}</span></a
+          <a routerLink="/" data-cy="home-link"
+            ><p class="link-text">Home</p></a
           >
         </li>
         <li>
-          <a routerLink="/about"><p class="link-text">About</p></a>
+          <a routerLink="/favourites" data-cy="favourites-link"
+            ><p class="link-text">Favourites</p>
+            <span data-cy="badge" class="badge">{{
+              favouritesCount$ | async
+            }}</span></a
+          >
+        </li>
+        <li>
+          <a routerLink="/about" data-cy="about-link"
+            ><p class="link-text">About</p></a
+          >
         </li>
       </ul>
     </nav>
