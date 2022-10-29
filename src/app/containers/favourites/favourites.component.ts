@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { FavouritesService } from '../../favourites.service';
+import { FavouritesService } from '../../services/favourites.service';
 
 import { Bier } from '../../bier.interface';
 import { Observable } from 'rxjs';

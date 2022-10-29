@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FavouritesComponent } from './favourites.component';
 import { BierDetailComponent } from '../../components/bier-detail/bier-detail/bier-detail.component';
-import { FavouritesService } from '../../favourites.service';
+import { FavouritesService } from '../../services/favourites.service';
 import { MatCardModule } from '@angular/material/card';
 
 describe('FavouritesComponent', () => {

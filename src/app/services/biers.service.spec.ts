@@ -1,12 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-
-import { BiersService } from './biers.service';
 import {
   HttpClientTestingModule,
   HttpTestingController,
 } from '@angular/common/http/testing';
-
-import { Bier } from './bier.interface';
+import { BiersService } from './biers.service';
+import { Bier } from '../bier.interface';
 import { FavouritesService } from './favourites.service';
 
 describe('BiersService', () => {
@@ -82,8 +80,8 @@ describe('BiersService', () => {
       },
     ];
 
-    service.getRandomBier().subscribe((bier) => {
-      expect(bier.name).toBe('random bier');
+    service.getRandomBier().subscribe((biers) => {
+      expect(biers[0]?.name).toBe('random bier');
       done();
     });
 
@@ -112,7 +110,7 @@ describe('BiersService', () => {
     expect(Object.keys(formattedBiers[1]).length).toBe(8);
   });
 
-  it('should check if bier is in favourites', () => {
+  it('should check if bier is in favourites', (done) => {
     const secondBier = {
       id: 1,
       name: 'second bier',
@@ -120,10 +118,12 @@ describe('BiersService', () => {
       abv: 7,
       favourite: true,
     };
-
     favouritesService.addBierToFavourites(secondBier);
-    const formattedBiers = service.formatBierResult(biers);
-    expect(formattedBiers[0].favourite).toBeFalsy();
-    expect(formattedBiers[1].favourite).toBeTruthy();
+    favouritesService.favourites$.subscribe(() => {
+      const formattedBiers = service.formatBierResult(biers);
+      expect(formattedBiers[0].favourite).toBeFalsy();
+      expect(formattedBiers[1].favourite).toBeTruthy();
+      done();
+    });
   });
 });

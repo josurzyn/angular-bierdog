@@ -1,28 +1,24 @@
-<button mat-raised-button (click)="getRandom()">
-  Surprise Me
-</button>
+<button mat-raised-button (click)="getRandom()">Surprise Me</button>
 
-<button mat-raised-button (click)="handleBrowse()">
-  Browse the catalogue
-</button>
+<button mat-raised-button (click)="handleBrowse()">Browse the catalogue</button>
 
 <app-filters (updateParams)="onUpdateParams($event)"> </app-filters>
 
-<div *ngIf="randomBier" class="centre-container">
-  <h3>Why not try a...</h3>
-  <app-bier-detail [detail]="randomBier"></app-bier-detail>
-</div>
+<ng-container *ngIf="(isGettingBiers$$ | async) === false; else loading">
+  <section
+    *ngIf="biers$ | async as biers"
+    [class.bier-container]="biers.length > 1"
+    [class.centre-container]="biers.length === 1"
+  >
+    <app-bier-detail *ngFor="let bier of biers" [detail]="bier">
+    </app-bier-detail>
+    <p *ngIf="biers.length === 0">
+      Oops, we can't find any matching beers. Try adjusting the filters to find
+      your perfect brew.
+    </p>
+  </section>
+</ng-container>
 
-<div class="bier-container" *ngIf="apiBiers.length > 0">
-  <app-bier-detail *ngFor="let bier of apiBiers" [detail]="bier">
-  </app-bier-detail>
-</div>
-
-<div *ngIf="noBiersFound">
-  Oops, we can't find any matching beers. Try adjusting the filters to find your
-  perfect brew.
-</div>
-
-<div class="centre-container">
-  <mat-spinner *ngIf="isGettingBiers"></mat-spinner>
-</div>
+<ng-template #loading>
+  <mat-spinner class="spinner"></mat-spinner>
+</ng-template>

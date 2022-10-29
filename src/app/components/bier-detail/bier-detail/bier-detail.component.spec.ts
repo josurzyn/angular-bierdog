@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { BierDetailComponent } from './bier-detail.component';
 import { MatCardModule } from '@angular/material/card';
+import { BierDetailComponent } from './bier-detail.component';
 
 describe('BierDetailComponent', () => {
   let component: BierDetailComponent;

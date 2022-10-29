@@ -1,7 +1,5 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
-
-import { FavouritesService } from '../../../favourites.service';
-
+import { FavouritesService } from '../../../services/favourites.service';
 import { Bier } from '../../../bier.interface';
 import { Heart } from './heart.interface';
 
