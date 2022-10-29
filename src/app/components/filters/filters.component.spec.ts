@@ -1,15 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { FiltersComponent } from './filters.component';
 import { FormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Search } from './search.interface';
-import { Subscription } from 'rxjs';
 import { By } from '@angular/platform-browser';
+import { Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
+import { FiltersComponent } from './filters.component';
+import { Search } from './search.interface';
 
 describe('FiltersComponent', () => {
   let component: FiltersComponent;
@@ -68,8 +67,9 @@ describe('FiltersComponent', () => {
   });
 
   it('should output search as parameters', (done) => {
-    const input = fixture.debugElement.query(By.css('input[name="foodSearch"]'))
-      .nativeElement;
+    const input = fixture.debugElement.query(
+      By.css('input[name="foodSearch"]')
+    ).nativeElement;
 
     input.value = 'chips';
 

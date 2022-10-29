@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Bier } from './bier.interface';
 import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-
+import { Bier } from '../bier.interface';
 import { FavouritesService } from './favourites.service';
 
 @Injectable({
@@ -24,11 +22,9 @@ export class BiersService {
   }
 
   getRandomBier() {
-    return this.http.get<Bier[]>(`${this.baseUrl}/random`).pipe(
-      map(this.formatBierResult),
-      // tslint:disable-next-line:no-non-null-assertion
-      map((biers) => biers.shift()!)
-    );
+    return this.http
+      .get<Bier[]>(`${this.baseUrl}/random`)
+      .pipe(map(this.formatBierResult));
   }
 
   getByFilters(params: string) {

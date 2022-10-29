@@ -1,9 +1,9 @@
-<p *ngIf="(favourites$ | async)?.length === 0">
-  You don't have any favourites!
-</p>
-<app-bier-detail
-  class="detail-single"
-  *ngFor="let bier of favourites$ | async"
-  [detail]="bier"
->
-</app-bier-detail>
+<ng-container *ngIf="favourites$ | async as favourites">
+  <p *ngIf="favourites.length === 0">You don't have any favourites!</p>
+  <app-bier-detail
+    *ngFor="let bier of favourites"
+    [detail]="bier"
+    class="detail-single"
+  >
+  </app-bier-detail>
+</ng-container>

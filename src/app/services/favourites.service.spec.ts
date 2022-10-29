@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { FavouritesService } from './favourites.service';
-import { Bier } from './bier.interface';
+import { Bier } from '../bier.interface';
 
 describe('FavouritesService', () => {
   let service: FavouritesService;
@@ -31,12 +31,15 @@ describe('FavouritesService', () => {
     });
   });
 
-  it('should check if bier is a favourite', () => {
+  it('should check if bier is a favourite', (done) => {
     let isFav = service.isFavourite(bier);
     expect(isFav).toBeFalsy();
     service.addBierToFavourites(bier);
-    isFav = service.isFavourite(bier);
-    expect(isFav).toBeTruthy();
+    service.favourites$.subscribe((favourites) => {
+      isFav = service.isFavourite(bier);
+      expect(isFav).toBeTruthy();
+      done();
+    });
   });
 
   it('should get favourites$ Observable', (done) => {

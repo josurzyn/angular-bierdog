@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-
-import { FavouritesService } from './favourites.service';
 import { Observable } from 'rxjs';
+import { FavouritesService } from './services/favourites.service';
 
 @Component({
   selector: 'app-root',
